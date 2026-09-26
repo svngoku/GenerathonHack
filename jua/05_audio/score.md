@@ -3,20 +3,20 @@
 ## Reference track: Tabu Ley Rochereau, "Pitié" (4:12)
 Marty's choice for the film's soul: 1970s Congolese rumba. It sets the photo's place and era (**Kinshasa**) and the instrument (**clean rumba guitar**, with a sebene feel held back).
 
-**Rights: read before using it in the film.** "Pitié" is a commercially released, copyrighted recording (Tabu Ley's estate and publishers). Without a licence:
-- YouTube Content ID will likely claim it, even on an unlisted upload. The video can be **muted or blocked in some countries, so the jury might not be able to play it.**
-- The kit's rules (§1) and the honesty spirit of the film both say: no unlicensed music.
+**Decision (Marty, informed): "Pitié" is used in the demo film.** Rights were discussed and accepted for this non-commercial hackathon demo.
+Mitigations (mandatory):
+- **Upload the unlisted film to YouTube early (Sat night)** and check it plays for a logged-out viewer in several countries. If Content ID mutes or blocks it, switch to the backup.
+- **Backup mix always ready:** the original-score version (cues A/B below, rumba guitar in the same spirit) → `06_edit/cut_vNN_original_score.mp4`.
+- Credit it on the end card: *Music: Tabu Ley Rochereau, "Pitié"*. Log it in licenses.md as "used for non-commercial demo; not licensed".
+- **Keep the mp3 local** (`jua/05_audio/reference/`, git-ignored). Edit it with ffmpeg on the machine; never upload it to Arcads or use it as a generation reference.
 
-| Use | OK? |
-|---|---|
-| Temp track in the animatic / rough cuts (internal only) | ✅ |
-| Mood and style reference for writing our own cues | ✅ (never upload it to a generator, never copy its melody) |
-| In the submitted film | ❌ unless licensed in writing (publisher / estate); log it in licenses.md |
-| **Documentary mode:** the witness says "she loved Tabu Ley" or hums a few bars from memory, in the room | ⚠️ the memory itself is powerful and true; keep any hum very short and ask an organizer whether it's acceptable |
+**How to use it in the cut:** find two passages by ear and with ffmpeg (`silencedetect`, `ebur128`):
+- **Cue A slot (10–38s, 28s):** the sparsest guitar-led passage. Faded in under the restoration, kept low.
+- **Silence (38–58s):** the song stops under the witness's first breath. Nothing plays under her voice.
+- **Cue B slot (58–75s, 17s):** the warmest or most resolved passage, entering on the pen touching the sleeve and ending on a phrase end (fade ≤ 1s).
+Write the exact timestamps and ffmpeg commands to `06_edit/music_edit.md`.
 
-**Keep the mp3 local.** Don't commit it (copyright, size) and don't upload it to Arcads.
-
-## The musical idea
+## The backup: original score (same spirit) — and the musical idea
 A **four-note motif that never finishes** while she is unknown. It stops completely when the real voice speaks. When the name is written, the motif **returns and finally lands on its last note**. The melody finds its home when she gets her name back.
 
 Keep A and B the same instrument, **key and tempo** so they sound like one piece: **D minor → D major, 60 BPM**.

@@ -65,16 +65,16 @@ CHECKPOINT: show me the text.
 
 ## 6 · Score
 ```
-Phase 6. Follow jua/05_audio/score.md. Instrument: [likembe / kora / mbira / …].
-Audition cue A and cue B with suno_v6 (1 call each = 2 tracks). Play-order check: B straight after A must sound like the same player.
-CHECKPOINT: give me the 4 auditions with a one-line description each. After I pick, render finals with elevenlabs at exactly 28s and 17s → 05_audio/music/, and log them in licenses.
+Phase 6. Follow jua/05_audio/score.md. Primary: edit Tabu Ley "Pitié" locally from jua/05_audio/reference/ (cue A 28s, silence, cue B 17s → music_edit.md). Backup: original score in the same spirit, 1970s Kinshasa rumba guitar.
+For the backup: audition cue A and cue B with suno_v6 (1 call each = 2 tracks), and B straight after A must sound like the same player.
+CHECKPOINT: give me the "Pitié" excerpt timestamps + the 4 backup auditions with a one-line description each. After I pick, render the backup finals with elevenlabs at exactly 28s and 17s → 05_audio/music/, and log everything in licenses.
 ```
 
 ## 7 · Assembly
 ```
 Phase 7. Build jua/06_edit/cut_v01.mp4 with ffmpeg, 16:9 1080p, 75s, following shotlist.csv:
 - shot 02: restoration stages as 3s crossfades, corner caption "stage N · step · model" (small serif, 60% opacity), one wipe back to the original
-- music: cue A 10–38s, hard cut to silence at 38s, cue B 58–75s, ≤1s fade out
+- music: "Pitié" excerpts (cue A 10–38s, hard cut to silence at 38s, cue B 58–75s, ≤1s fade out), end-card credit "Music: Tabu Ley Rochereau, 'Pitié'"; ALSO export the backup cut with the original score
 - testimony audio 38–58s with burned-in EN subtitles
 - end card 70–75s: "We can restore the image. We remember the person together." + disclosure line(s) required by brief.md
 - loudness: -14 LUFS integrated

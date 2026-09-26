@@ -25,3 +25,15 @@ Production runs 100% in **Arcads**. This file keeps the knowledge of **Jua** (um
 2. **The AI is a restorer, not an author.** Jua restores; people remember. The film's climax is a human voice, which matches "keep the story together".
 3. **Say it plainly in the explainer:** "This is the pipeline I'm building in Jua; for the hackathon I ran it with the same models inside Arcads."
 4. **Never** let a generated detail pass as archival fact — Jua's value is trust in the archive.
+
+## Afro roots: the core of Jua (keep them specific, never generic "African")
+| Layer | Our reference | Use it for |
+|---|---|---|
+| Place & era | **Kinshasa, early 1970s**; present day: a family home in Kinshasa or the diaspora [ask Marty] | every prompt, the research file |
+| Music | **Tabu Ley Rochereau, "Pitié"**: Congolese rumba, clean guitar, grace | the film's music (score.md) and the emotional register |
+| Photography | the Kinshasa studio-portrait tradition (e.g. **Jean Depara**, **Ambroise Ngaimoko / Studio 3Z**); wider African studio portraiture (**Seydou Keïta**, **Malick Sidibé**, Bamako) | the fictional portrait's pose, backdrop, print feel; *style only, never a copy of a real photo or a real person* |
+| Language | **Lingala** and French | the testimony and the explainer's texture |
+| Dress & textile | wax-print pagne / liputa, headwrap, 1970s Kinshasa elegance | **research first** → `02_source/research.md` with sources; never guessed |
+| Jua itself | Jua Gallery: African everyday life, fashion, architecture, afrofuturism | the tone: dignity, specificity, pride; never misery or exoticism |
+
+Rules: name the real place, language and culture every time; no "tribal" clichés, no sepia-savannah shorthand; the film must never imply the past was lifeless until AI coloured it.

@@ -6,7 +6,7 @@ Marty Niongolo · 75s · 16:9 · made entirely in Arcads
 > **AI can restore a face. Only people can give back a name.**
 
 ## The film
-An old family photograph from [PLACE, YEAR]: cracked, faded, the woman in it unknown. We watch it being restored, stage by stage, until her face is clear again, and then the film stops showing off. The music cuts. In the silence, someone who knew her says her name and remembers one small, sensory thing about her. A younger hand writes that name on the photo sleeve, and the melody that could never finish finally resolves. The film ends on the original and the restoration side by side: the AI version never replaces the real one.
+An old family photograph from **Kinshasa, early 1970s**: cracked, faded, the woman in it unknown. We watch it being restored, stage by stage, until her face is clear again, and then the film stops showing off. The music cuts. In the silence, someone who knew her says her name and remembers one small, sensory thing about her. A younger hand writes that name on the photo sleeve, and the melody that could never finish finally resolves. The film ends on the original and the restoration side by side: the AI version never replaces the real one.
 
 **Emotional arc (our choice): absence → curiosity → belonging.**
 **End line:** *"We can restore the image. We remember the person together."*
@@ -16,6 +16,9 @@ No narrator, no explaining voice-over. The story reaches the emotional brain thr
 - **Sound:** paper and room tone → a four-note motif that never resolves → total silence on a breath → the motif resolves under the pen.
 - **Touch:** a thumb on the print's edge, a pen that hesitates before writing.
 - **Memory:** the only words are the witness's, spoken inside the room, with a sensory detail (a smell, a song, a fabric), not facts read from a script.
+
+## Afro roots
+Kinshasa, Lingala, Congolese rumba, and the Kinshasa studio-portrait tradition (Jean Depara, Studio 3Z): specific, never generic. Details in `jua/00_brief/jua_context.md`.
 
 ## Why it matters: Jua
 Jua (umojua.com) is a workspace to *make, restore, and keep the story together* for African heritage images, where *every result explains itself*. The film is Jua's thesis: restoration technology is powerful, and it must stay honest. It repairs, it doesn't invent. Each restoration stage appears on screen with the model that made it.
@@ -27,7 +30,7 @@ Jua (umojua.com) is a workspace to *make, restore, and keep the story together* 
 | Restoration in 4 stages | gpt-image-2.5 (sunburst) A/B nano-banana-2, each stage edits the previous one, face drift rejected |
 | Frozen-face motion | veo31 from the restored still: camera and light move, she never does |
 | Hands, room, native sound | seedance-2.5 with up to 30 image refs + the real testimony as an audio reference |
-| Score | Suno v6 auditions → ElevenLabs cues at exact length (28s + 17s), one instrument from the photo's place |
+| Music | **Tabu Ley Rochereau, "Pitié"** (Congolese rumba) edited into two cues around the silence; backup: an original rumba-guitar score (Suno v6 → ElevenLabs, 28s + 17s) |
 | Animatic & fixes | grok-video previz, omni-flash surgical edits |
 
 ## Honesty rules

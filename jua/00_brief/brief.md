@@ -5,14 +5,14 @@
 - Arc: **absence → curiosity → belonging**
 - Message / end line: **"We can restore the image. We remember the person together."**
 - Duration: **75s** target (max 3 min; a short, complete film beats a long one)
-- Aspect: 16:9 (YouTube submission) · Language: testimony in [NATIVE LANGUAGE], subtitles EN/FR
+- Aspect: 16:9 (YouTube submission) · Language: testimony in **Lingala** (or French, however the memory is naturally told), subtitles EN/FR
 - Thesis: restoration can recover a **face**; only people can recover a **name, a place, a story**. The AI is visible, honest, and never the climax.
 - Production: **100% Arcads**, prompted as Jua's pipeline ("Make, restore, and keep the story together" · "Every result explains itself"). See `jua_context.md`.
 
 ## The two assets that decide everything (find before generating anything)
 | Asset | Needed | Status |
 |---|---|---|
-| **The photograph** | one real family/community photo, specific place + year: [PLACE], [YEAR] | [ ] |
+| **The photograph** | one real family/community photo, specific place + year: **Kinshasa**, [1960s–70s YEAR] | [ ] |
 | **The witness** | one person who can say her name, place, and ONE ordinary true detail (what she made, a phrase she used, where she gathered people) | [ ] |
 | Permission | photo owner + witness agree to film use & upload to Arcads (written or recorded "yes") | [ ] |
 
@@ -27,7 +27,7 @@ Have both → documentary mode. Missing either by **Saturday 15:00** → **ficti
 ## Fictional proof-of-concept mode
 - Portrait generated from scratch (no real archival face), testimony voiced by a consenting person reading a written script.
 - End card must say: **"Fictional proof of concept. No real person is depicted."**
-- Keep a concrete place/year anyway — specificity is what moves people. [FICTIONAL PLACE, YEAR]
+- Keep a concrete place/year anyway — specificity is what moves people. Default: **Kinshasa, early 1970s** (the era of Tabu Ley's rumba).
 
 ## Limbic narration (the track's challenge)
 Tell the story to the emotional brain (senses, memory, rhythm), not through an explaining voice.
