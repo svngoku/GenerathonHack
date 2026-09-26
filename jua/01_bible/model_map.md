@@ -45,16 +45,12 @@ Sound is where the story is rooted. Plan it as three layers:
 | Layer | Source | Notes |
 |---|---|---|
 | **Diegetic** — room tone, paper, sleeve, pen scratch, breath | seedance-2.5 `audioEnabled: true` on shots 01/04/05 | prompt: "natural room sound only, no music, no voices" |
-| **Music** — cue A (0–38s) + cue B (58–75s), silence between | **elevenlabs** music, `instrumentalOnly: true`, exact durations 38s and 17s | exact length = lands on the cut. Instrument rooted in [PLACE]: e.g. solo likembe / rumba guitar / kora — one instrument, sparse |
+| **Music** — cue A (10–38s) + cue B (58–75s), silence under the voice | **elevenlabs** music, `instrumentalOnly: true`, exact durations 28s and 17s | full score, motif and prompts: **`05_audio/score.md`** |
 | Music variations to choose from | suno_v6 (2 tracks per call, same price) | pick by ear, then regenerate the chosen mood in elevenlabs for exact length |
 | **Voice** — testimony | **real recording** (non-negotiable in documentary mode) | Arcads captions (if exposed by the MCP) or editor subtitles; names checked by a human |
 | Voice — fictional mode only | Arcads voices / imported ElevenLabs voice, disclosed | or better: a consenting person reads `05_audio/script.md` |
 
-Music prompt seed:
-```
-Cue A (38s, instrumental): a single [likembe / rumba guitar / kora] rooted in [PLACE], slow and hesitant, lots of space between notes, intimate close-mic, like someone searching a memory. No drums, no vocals, no build.
-Cue B (17s, instrumental): the same instrument and motif, now warmer and resolved, a second soft voice of the same instrument joins, gentle ending on a held note. No drums, no vocals.
-```
+Music: see **`jua/05_audio/score.md`** (unfinished motif → silence → motif resolves on the name).
 
 ## 4. Order of spend
 1. `GET /v1/credits` → check budget.

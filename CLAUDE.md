@@ -7,6 +7,9 @@ Deadline: **Sunday 2026-09-27, 14:00** (internal cutoff 12:00). Active project: 
 2. `jua/00_brief/brief.md` — arc, mode, honesty rules, emotion variants
 3. `jua/01_bible/model_map.md` — which Arcads model does which job (verified API limits)
 4. `jua/01_bible/shotlist.csv`, `visual_bible.md`, `prompts.md`
+5. `jua/05_audio/score.md` — the music tells the story too (motif resolves when the name is written)
+
+Phase-by-phase prompts: `jua/AGENT_PROMPTS.md` (0 kickoff → 9 delivery).
 
 ## The story in one line
 AI restores a face; only people can give back a name. **Absence → curiosity → belonging.** The climax is a real human voice, never an AI effect.
@@ -15,7 +18,8 @@ AI restores a face; only people can give back a name. **Absence → curiosity �
 - **Never invent** a name, place, date, clothing fact or biography. Unknown → `[TODO: ask Marty]`.
 - **Restore, never re-create:** each restoration stage takes the previous stage as input; reject any output where the face drifts.
 - **Nobody in the photograph moves their face or speaks.** Talking-actor / omnihuman / audio_driven models are forbidden on the portrait.
-- No generated lettering — names and titles are real handwriting or edit overlays.
+- No generated lettering — names and titles are real handwriting or baked overlays (method in prompts.md, shot 05).
+- Follow the 6 prompt rules and the IDENTITY LOCK at the top of `jua/01_bible/prompts.md` in every generation.
 - Original is shown before and beside the restoration, never replaced by it. Colour, if used, is disclosed.
 - Fictional mode → end card: "Fictional proof of concept. No real person is depicted."
 
