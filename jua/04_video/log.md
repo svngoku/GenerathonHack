@@ -113,3 +113,12 @@ Assembly: `06_edit/cut_v06_voiceElisa.mp4` (2:45.5, 1080p, −14.4 LUFS), rebuil
 | collage | seedance-2.5 ×2, 10s, audio: slow pull-back, window light drifts, nothing moves | IMAGE REFERENCES + IDENTITY LOCK + NEGATIVE | kf_collage_b_locked | A: 40707173-4282-48be-9d3f-1c9dbea70831 → `collage_A.mp4` (420) · B: a0ff2639-2cc6-49c8-8e5c-a0d0e61c538a → `collage_B.mp4` (420) | **KEEP A** (from 1.5 s every print is inside the frame; light sweep); B pulls back into a dark floor. Local fallback: `06_edit/collage/collage_local.mp4` |
 
 Comparison for Marty: `04_video/seedance25/name_compare_A_vs_hybrid.mp4`. Spend this round: 2,352 credits.
+
+## Round v08: voice with an African accent (ElevenLabs MCP)
+| shot | model | prompt | refs | file | verdict |
+|---|---|---|---|---|---|
+| voice check | ElevenLabs `creative_list_voices` | Marty's voice id vDyhpISvKaEsK9QtEFlO | — | — | it is **"Dolamade"**, labelled en-nigerian (an English voice). The library search for female `fr-african` voices found Fatou (Vza9yt3uSx3RXnRx6YfI), Aquilas, Mar, Ropako |
+| testimony | ElevenLabs eleven_v3 ×2 per voice (flow czR8p6OzVq5lDhs8ExEH), script.md with v3 tags [softly] [pause] [hums softly] [small laugh] [long pause] [breathes] | — | Dolamade, Fatou | `05_audio/voice/v08/dolamade_1,2.mp3`, `fatou_1,2.mp3` (~415 EL credits each) | Local Whisper check: **dolamade_1 KEEP** (clean; "tout bas" slightly swallowed) · dolamade_2 REJECT ("Kobosana te" garbled) · **fatou_1 KEEP, chosen for the film** (francophone African accent; every word clear) · fatou_2 REJECT ("Roche-Roe") |
+| pacing | `06_edit/v06/pace_take.py` | one continuous take; only the gaps between lines move, to the film's line grid; subtitle times rewritten from the real audio | — | `voice_paced_fatou.wav` / `_dolamade.wav` + `subs_*.json` | the voice is 5.5 dB louder than Elisa, so voice_gain drops from 3.5 to 1.85 |
+
+Assembly: `06_edit/cut_v08_fatou.mp4` (main) and `cut_v08_dolamade.mp4` (the voice Marty asked for), built with `TIMELINE=timeline_v08.json SUBS=subs_<voice>.json build_v06.py voice_paced_<voice>.wav`.

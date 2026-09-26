@@ -35,3 +35,9 @@ Lingala words marked `[CHECK]` — to be checked with a Lingala speaker; never t
 - **Soap and charcoal**: a smell, not a fact — sensory, ordinary, no biography.
 - **"Kobosana te"** (don't forget) is the film's thesis in her own words — and the reason the name is written on the sleeve.
 - No dates, jobs, places beyond Kinshasa, or life events are invented.
+
+## Voice as built (cut v08)
+- **Disclosed synthetic voice:** ElevenLabs eleven_v3. The end card says "Voice: AI-generated".
+- **Main voice:** Fatou (ElevenLabs library, `fr-african`, "a French-speaking African woman").
+- **Alternative:** Dolamade, the voice Marty asked for. It is an English voice with a Nigerian accent, so its French sounds anglophone West African, not Kinshasa.
+- **Still open:** no Congolese (Lingala-accented) voice exists in the library. A consenting Kinshasa speaker remains the best option. "Kobosana te" still needs checking by a Lingala speaker `[CHECK]`.

@@ -49,7 +49,7 @@ print("picture.mp4", dur("picture.mp4")); assert abs(dur("picture.mp4") - B[-1])
 
 # 3) overlays (own pass, video only): each PNG cropped to its text box, looped at 24 fps, alpha-faded, shifted in time
 from PIL import Image
-subs = json.load(open(f"{V5}/subs.json")); caps = json.load(open("lyric_caps.json"))
+subs = json.load(open(os.environ.get("SUBS", f"{V5}/subs.json"))); caps = json.load(open("lyric_caps.json"))
 ov = [(f"{V5}/sub_{i}.png", VO + a, VO + b, 0.25) for i, (a, b, _) in enumerate(subs)]
 ov += [(f"lyr_{i}.png", c["t0"], c["t1"], 0.6) for i, c in enumerate(caps)]
 ov += [(n["png"], n["t0"], n["t1"], 0.6) for n in T.get("notes", [])]
@@ -85,8 +85,8 @@ sh([FF, "-loglevel", "error", "-y", *ai, "-filter_complex", ";".join(fc), "-map"
 sh([FF, "-loglevel", "error", "-y", "-i", "overlaid.mp4", "-i", "mix.wav", "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-t", str(TOTAL), OUT])
 print(OUT, dur(OUT))
 for f in os.listdir("."):
-    if f.startswith("g") and f[1:3].isdigit() and f.endswith((".mp4", ".wav")): os.remove(f)
-for f in ("picture.mp4", "overlaid.mp4", "mix.wav"): os.remove(f)
+    if f.startswith("g") and f[1:3].isdigit() and f.endswith((".mp4", ".wav")) and not os.environ.get("KEEP"): os.remove(f)
+for f in (("overlaid.mp4", "mix.wav") if os.environ.get("KEEP") else ("picture.mp4", "overlaid.mp4", "mix.wav")): os.remove(f)
 for f in os.listdir("."):
     if f.startswith("ov_") and f.endswith(".png"): os.remove(f)
 print("built", OUT, TOTAL, "s")
