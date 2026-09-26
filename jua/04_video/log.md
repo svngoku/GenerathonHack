@@ -141,3 +141,11 @@ Spend this round: 3,320 credits.
 | return home | seedance-2.5 ×2, 16s 720p, audio | evening; a slow dolly-in from the doorway; the granddaughter, seen only from behind in a grey long-sleeved top, walks in holding the print, lays it on the table by the window and sits; the camera ends above her shoulder on the photo. Audio: footsteps, chair, distant Kinshasa evening | room plate (room_A ref 0), hands_sheet, K1 | A 2769e5ca-6e48-4db0-9f76-f8e6d7bf2b9d → `04_video/seedance25/return_A.mp4` · B aebbb56c-1ab9-4ac0-8623-0b174c5c48dd → `return_B.mp4` (672 each) | **KEEP B**: pale grey top matches the hands in shot 04; her face is never shown; ends on the photo, which motivates the dissolve to the overhead hands. A REJECT: she wears a wax-print wrap and then a headwrap, so she reads as Mama Nzeba, which breaks continuity |
 
 It replaces `room_push` in `timeline_v10.json`, playing under the lyric *Le soir je vais revenir… je fais ton avenir*. Spend this round: 1,344 credits.
+
+## Round v11: continuity from 1:32 to 2:15 ("changing to the old hands-on-table scene is too rude"); music ducked, not cut
+| shot | model | prompt | refs | file | verdict |
+|---|---|---|---|---|---|
+| holds the photo | seedance-2.5 ×2, 22s 720p, audio; opening frame = the **last frame of return_B**, so the scene continues | over her shoulder at dusk she lifts the print into the last window light, her thumb traces the edge; the camera drifts in until the print fills the frame. IDENTITY LOCK on the print; her face never shown | return_B last frame, K1, hands_sheet | A 44f32307-aea2-45b9-8a9c-571426a076f0 → `hold_A.mp4` · B d6a1e59b-6ba0-443c-882e-fd42d883f955 → `hold_B.mp4` (924 each) | **KEEP B**: continuous with return_B; ends with the print filling the frame, which leads into the face beat. The print is the worn original, warm in the backlight, and does not move. A is similar but ends less close |
+| music | local | "Pitié" is one continuous cue from 0:10 (song 0:06) to the end; it dips from 0.5 to 0.11 (−13 dB) over 1:31–1:35, stays under the voice, and returns over 2:11–2:14 | — | `timeline_v11.json` (cue_a.duck) | replaces the stop at 1:36 and the separate cue B |
+
+The old overhead shot04 (hands on the old table) is no longer used. Timeline: return_B → cut → hold_B → 2.5 s dissolve → face_alive. Spend this round: 1,848 credits.

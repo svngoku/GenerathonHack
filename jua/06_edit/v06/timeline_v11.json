@@ -55,16 +55,16 @@
    "speed": 1.05
   },
   {
-   "name": "shot04",
-   "src": "$SD/shot04_A.mp4",
-   "xin": 3.0,
-   "vol": 0.35,
-   "speed": 1.16
+   "name": "holds_photo",
+   "src": "$SD/hold_B.mp4",
+   "xin": 0,
+   "vol": 0.6,
+   "speed": 1.01
   },
   {
    "name": "face_alive",
    "src": "../face_anim/face_alive.mp4",
-   "xin": 1.5
+   "xin": 2.5
   },
   {
    "name": "named_seedance",
