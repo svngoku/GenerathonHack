@@ -7,7 +7,7 @@
 
 Alternates: "We can restore the image. We remember the person together." (58) · "An old family photo, restored by AI. Only the people who knew her could give back her name." (91)
 
-**Track:** Two Minutes to Move
+**Track:** Three Minutes to Move — Short Film (the form may show "Two Minutes to Move"; same track)
 
 **Primary link:** final render (YouTube, *unlisted*, not private — jury must play it without login)
 **Portfolio link:** https://www.umojua.com/
@@ -27,21 +27,8 @@ Alternates: "We can restore the image. We remember the person together." (58) ·
 
 ---
 
-## 🗣️ Explainer video script (≈ 85s at a calm pace; limit 1:30)
-> Production framework (9 blocks, B-roll, thumbnail concepts + QA): see `explainer_thumbnail.md`. The draft below is the short version.
-Replace every [bracket] with what actually happened — the jury rewards honesty about struggles.
+## 🗣️ Face cam explainer (≤ 60s; the deck's limit is stricter than the form's 1:30)
+Script, 8 required items and cutaways: **`explainer_thumbnail.md`**. Record it on Sunday morning, after production, so the challenges and lessons are real.
 
-**What it's about (15s)**
-"I build Jua, a workspace to make, restore, and keep the story together for African heritage images. For this film I wanted to show what restoration can — and can't — recover. AI can make a face visible again. It can't give her back her name. Only people can."
-
-**Tools and why (20s)**
-"Everything generated ran in Arcads, using the same models as Jua's pipeline — Nano Banana and GPT Image for a restoration in stages, [Kling / Veo] for one restrained motion shot, Arcads captions for the subtitles. Each stage shows its model on screen, because in Jua every result explains itself. The voice is real — that part AI can't do."
-
-**Difficulties (20s)**
-"The hardest part wasn't technical — it was [finding the photo and someone who could speak about it truthfully / deciding what the AI is *not* allowed to do]. Video models kept trying to make the face smile or blink; I had to reject [N] takes. [Tool setup struggle, e.g. connecting the Arcads MCP to my agent workflow.]"
-
-**What I learned (15s)**
-"Restraint is the effect. The strongest moment is when the music stops and someone just says her name."
-
-**What I'd do better (15s)**
-"[Record more testimony earlier / film the witness on camera / start the restoration the night before] — and give the community a way to add names to photos themselves."
+## 🎤 Live demo intro (Sun 17:30 screening, ~20s spoken)
+"Old photographs keep faces but lose names. We used AI to restore one — and then stopped, because the most important part had to come from a person. Watch for the moment the music stops."

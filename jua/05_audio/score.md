@@ -33,7 +33,9 @@ Solo [INSTRUMENT] from [PLACE], intimate close-mic, D major, 60 BPM. The same si
 ```
 **Finals (elevenlabs, `instrumentalOnly: true`, exact `duration`):** reuse the chosen audition's wording → Cue A `duration: 28`, Cue B `duration: 17`. Save as `05_audio/music/cue_a_v01.mp3`, `cue_b_v01.mp3`.
 
-**Optional (only if it serves the story):** a wordless hum over cue B — suno_v6, `instrumentalOnly: false`, lyrics `[Hummed melody, no words]`. Never generate lyrics in a real language: a model would get it wrong and it would sound invented.
+**Best option (limbic):** if the witness hums a tune she remembers, record it and build cue B around it (transcribe the notes, prompt the instrument to play that melody, or lay the real hum under cue B). The music then comes from her memory.
+
+**Optional:** a generated wordless hum over cue B — suno_v6, `instrumentalOnly: false`, lyrics `[Hummed melody, no words]`. Never generate lyrics in a real language: a model would get it wrong and it would sound invented.
 
 ## Checks before locking
 - [ ] A and B sound like the same player on the same instrument (play B straight after A)

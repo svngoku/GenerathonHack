@@ -6,7 +6,7 @@
 
 ## 0 · Kickoff (paste once per new session)
 ```
-git pull. Read CLAUDE.md and every file it lists, in order. Then reply with:
+git pull. Read CLAUDE.md and every file it lists, in order (official_rules.md overrides everything). Then reply with:
 1. the story in two sentences,
 2. the mode you'll run (DOCUMENTARY / FICTIONAL) and what's missing for it,
 3. the Arcads tools you discovered and the credits balance,
@@ -15,7 +15,7 @@ Don't generate anything yet.
 
 Mode: [DOCUMENTARY — original scan is jua/02_source/original.png; owner and witness gave permission]
    or [FICTIONAL — place: ___, year: ___]
-Emotion assigned at kickoff: [BELONGING / other → apply the matching row in brief.md first]
+Emotion (we choose it): BELONGING  [or another → apply the matching row in brief.md first]
 ```
 
 ## 1 · Source + lock set
@@ -58,7 +58,8 @@ Use omni-flash on jua/04_video/shot_[NN]_v[XX].mp4: [exact problem, e.g. "the pr
 ## 5 · Testimony + subtitles
 ```
 Phase 5. [DOCUMENTARY] Transcribe jua/05_audio/testimony.[m4a]. Write jua/05_audio/subtitles_en.srt and _fr.srt timed to 38–58s. Mark every name, place and non-English word as [CHECK] — don't guess spellings. Use Arcads captions if the MCP exposes them; otherwise produce the SRT.
-[FICTIONAL] Draft jua/05_audio/script.md: 3–4 plain sentences — her name, the place, ONE ordinary detail (something she made, a phrase she used, where she gathered people). No grand claims. A consenting person will read it.
+[FICTIONAL] Draft jua/05_audio/script.md: 3–4 plain, spoken-sounding sentences — her name, the place, ONE sensory detail (a smell, a song she hummed, the fabric she wore, a sound from her kitchen). No grand claims, no narration. A consenting person will say it in the room — recorded with room acoustics and breath, not close-mic studio.
+[BOTH] Remind me: record the witness in the room, keep the breaths and pauses, and ask whether she used to hum or sing something — record that too (score.md cue B).
 CHECKPOINT: show me the text.
 ```
 
@@ -99,7 +100,7 @@ List only FAIL/PARTIAL items, each with the smallest fix and its credit cost.
 ```
 Phase 9. Final QA from generathon-emotion-ad-production-kit.md §6. Then, following jua/delivery/explainer_thumbnail.md:
 - Thumbnail: pitch me 5 concepts (A–E), generate my pick (2 variants), bake any text afterwards, run the thumbnail QA → jua/delivery/thumbnail.png
-- Explainer: pull my real struggles from the log.md files and rejected takes, list them for me to confirm (don't invent any), then fill the 9 script blocks and a B-roll list
+- Face cam explainer (≤ 60s, 8 required items): pull my real challenges, wins and lessons from the log.md files and rejected takes, list them for me to confirm (don't invent any), fill the 8 script blocks (~150 words), and export the pipeline node-graph cutaway
 Fill jua/delivery/submission.md with the final YouTube link [URL] and explainer link [URL]. Commit, push, and give me the exact form fields to paste.
 ```
 

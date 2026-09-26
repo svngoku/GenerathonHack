@@ -1,8 +1,9 @@
 # Generathon #2 — agent instructions
 
-Deadline: **Sunday 2026-09-27, 14:00** (internal cutoff 12:00). Active project: **`jua/`** — "Jua — More Than a Photograph", track *Two Minutes to Move*, 75s, 16:9. `project/` (First Light) is a fallback only.
+Deadlines: **Sun 2026-09-27 — soft 13:30 (stop & upload), hard 14:00** (internal cutoff 12:00). Active project: **`jua/`** — "Jua — More Than a Photograph", track **Three Minutes to Move — Short Film**, challenge **"Limbic Narration, Not Just a Voice-Over"**, 75s, 16:9. `project/` (First Light) is a fallback only.
 
 ## Read first, in order
+0. `jua/00_brief/official_rules.md` — organizers' rules, deliverables, judging (overrides everything)
 1. `jua/00_brief/jua_context.md` — what Jua is and how it shapes the story
 2. `jua/00_brief/brief.md` — arc, mode, honesty rules, emotion variants
 3. `jua/01_bible/model_map.md` — which Arcads model does which job (verified API limits)
@@ -15,6 +16,7 @@ Phase-by-phase prompts: `jua/AGENT_PROMPTS.md` (0 kickoff → 9 delivery).
 AI restores a face; only people can give back a name. **Absence → curiosity → belonging.** The climax is a real human voice, never an AI effect.
 
 ## Hard rules (stop and ask rather than break one)
+- **No narrator / voice-over.** The only spoken words are the witness's, inside the scene (limbic narration: breath, touch, silence, a sensory memory).
 - **Never invent** a name, place, date, clothing fact or biography. Unknown → `[TODO: ask Marty]`.
 - **Restore, never re-create:** each restoration stage takes the previous stage as input; reject any output where the face drifts.
 - **Nobody in the photograph moves their face or speaks.** Talking-actor / omnihuman / audio_driven models are forbidden on the portrait.
@@ -33,4 +35,4 @@ AI restores a face; only people can give back a name. **Absence → curiosity �
 - Commit + push after each checkpoint (`feat(jua): shot 03 takes v01-v02`). Keep each video file < 100 MB.
 
 ## Definition of done
-Muted, a stranger reads: worn photo → face becomes clear → a name is written. With sound: the music stops and a real voice says who she was. `jua/delivery/submission.md` filled, YouTube link unlisted and playable.
+Muted, a stranger reads: worn photo → face becomes clear → a name is written. With sound: the music stops and a real voice says who she was. `jua/delivery/submission.md` filled, YouTube link unlisted and playable, **face cam explainer ≤ 60s covering all 8 items** (inspiration, what, how, challenges, proud of, learned, next, tools).
