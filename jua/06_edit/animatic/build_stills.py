@@ -24,5 +24,6 @@ elif beat=="06": # 5s: side by side + end line + disclosure
     im.paste(orig.resize((w,h)),(18,60)); im.paste(orig.resize((w,h)),(W-w-18,60))
     d=ImageDraw.Draw(im); f=serif(13); d.text((18,60+h+6),"original",fill=(200,190,170),font=f); d.text((W-w-18,60+h+6),"restored (placeholder)",fill=(200,190,170),font=f)
     f2=serif(20); t="We can restore the image. We remember the person together."; d.text(((W-d.textlength(t,font=f2))/2,370),t,fill=(244,234,213),font=f2)
-    f3=serif(13); t2="Fictional proof of concept. No real person is depicted."; d.text(((W-d.textlength(t2,font=f3))/2,410),t2,fill=(200,190,170),font=f3)
+    f3=serif(13); t2="Fictional proof of concept. No real person is depicted."; d.text(((W-d.textlength(t2,font=f3))/2,405),t2,fill=(200,190,170),font=f3)
+    t3="Music: Tabu Ley Rochereau, \"Pitié\""; d.text(((W-d.textlength(t3,font=f3))/2,428),t3,fill=(200,190,170),font=f3)
     emit(im,5*FPS)

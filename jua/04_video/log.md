@@ -30,3 +30,21 @@ Previous (P2) animatic and its segments moved to `06_edit/superseded_P2/`. Start
 | 06 | none (local) | as v01 with K1 | locked/original.png | `shot_06.mp4` | placeholder |
 
 Assembly: `06_edit/animatic_v02.mp4` (75.04s, 854x480, no music). Phase 2 v02 spend: 704 credits.
+
+## Phase 2 v03 — consistency fix (Marty: "no consistency at 0:59 … each frame full consistency … direct link with image choices and music")
+Rule adopted: **every frame is built from `locked/`.** Faces come only from K1 pixels; hands only from `hands_sheet`; table/sleeve/pen only from the locked plates. v02 Grok takes moved to `06_edit/superseded_v02/`.
+
+| shot | model | prompt | refs | file | verdict |
+|---|---|---|---|---|---|
+| 01 | none — local pan (Pillow+ffmpeg, `animatic/build_moves.py 01`) | torn edge → face, 10s | `print_on_table.png` (K1 on locked table) | `animatic/move_01.mp4` | KEEP — face = K1 pixels, no drift |
+| 03 | none — local push + honey light band (`build_moves.py 03`) | full frame → face, 10s | same | `animatic/move_03.mp4` | KEEP — face = K1 pixels |
+| KF04 v1 | nano-banana-2 ×2, generated from refs | hands + print + table from refs | hands_sheet, K1, table_close | `keyframes/v1/kf04_a,b.png` (afbd6fe6…, c8bbdd3d…) | REJECT — print redrawn portrait-format, damage lost |
+| KF05 v1 | nano-banana-2 ×2 | hands + pen + print + sleeve from refs | hands_sheet, K1, sleeve | `keyframes/v1/kf05_a,b.png` (232a5f07…, 782ccf18…) | REJECT — print redrawn; b has two pens |
+| KF04 v2 | nano-banana-2 ×2, **edit of a locked-pixel base** (`keyframes/base04.png` = K1 on table) | "Change ONLY: add the hands from image 2 … keep the print … pixel-faithful" | base04, hands_sheet | `keyframes/kf04_c.png` (516bf34b-4ff6-4380-aa5b-0840cc8b4a93) KEEP · `kf04_d.png` (a221f43f…) alt | KEEP c — print untouched, locked hands on the edges, face clear |
+| KF05 v2 | nano-banana-2 ×2, edit of `keyframes/base05.png` (locked sleeve + pen + K1 print) | "Change ONLY: add the hands … right hand picks up the pen … only one pen" | base05, hands_sheet | `keyframes/kf05_c.png` (1e46eafd-f48c-4432-abb8-855fca7863d5) KEEP · `kf05_d.png` (79637e57…) alt | KEEP c — one pen, locked hands, blank sleeve, K1 print unchanged |
+| 04 | grok-video 480p, 15s + 5s hold | thumb moves along the edge; room sound | start = KF04 c | asset f76eba41-5db9-4e2b-b4dd-e14b44f65d6d → `animatic/grok_04.mp4` (304 cr) | KEEP (animatic) — hands consistent; right hand lifts the print corner near the end |
+| 05 | grok-video 480p, 12s | hand hesitates, writes one short word; pen scratch | start = KF05 c | asset c43f6a86-e920-4020-aa9e-f0ec5e3025da → `animatic/grok_05.mp4` (240 cr) | KEEP (animatic) — same hands, K1 print unchanged; nothing legible written |
+
+Music link (local only, never uploaded): rough "Pitié" bed from `05_audio/reference/tabu_ley_pitie.mp3` — cue A = song 0:00–0:28 at film 10–38s (2s fade-in, hard cut at 38s); silence 38–58s; cue B = song 3:47–4:04 (its own outro) at film 58–75s (1s fade-out). Picked from a 4s RMS loudness profile (opening = quietest build; ending = the song's own resolution) — **confirm by ear**. End card now credits *Music: Tabu Ley Rochereau, "Pitié"*. Placeholder name overlay "[her name]" at 66.5–70s.
+
+Assembly: `06_edit/animatic_v03.mp4` (75.00s, 854x480). v03 spend: 544 credits.
