@@ -1,23 +1,22 @@
 # Explainer video + thumbnail (frameworks adapted from higgsfield-ai/skills, MIT)
 
-## Explainer (≤ 90s, target 85s)
-**Format:** Marty on camera or voice-over, cut with real process footage: Arcads screens, the `log.md` files, restoration stages, rejected takes. Rejected takes are the most honest proof of the struggle.
+## Explainer: FACE CAM, ≤ 60s, 8 required items (official deck)
+**Format:** Marty's face on camera for the whole minute. Real process footage can appear as picture-in-picture or quick cutaways: the Arcads pipeline shown as a node graph (references → restoration stages → shots → music), rejected takes, `log.md`. **No avatar, no generated presenter.**
 
-**Script rules:** blocks of 20–24 words (≈ 8–9s each). No timecodes or stage directions, numbers spelled out, never say "in this video". Every fact comes from the logs; don't invent any.
+**Script rules:** about 150 words total, one block of about 18 words (≈ 7s) per item, numbers spelled out, never say "in this video", every fact from the logs. Don't invent any struggle.
 
-| # | Beat (form field) | Visual | Script block (fill from real experience) |
+| # | Required item | Cutaway | Script block (≈ 7s — fill the [brackets] from real experience) |
 |---|---|---|---|
-| 1 | Hook | worn original → restored, split | "AI can bring back a face from a damaged photograph. It cannot bring back her name. That gap is what this film is about." |
-| 2 | About | shot 04 still + waveform | "Jua is my workspace to make, restore, and keep African heritage images together. Here, a real voice gives back what restoration can't." |
-| 3 | Tools & why | Arcads screen, model names | "I ran Jua's pipeline in Arcads: [models] for a staged restoration, [veo] for one frozen-face shot, [seedance] for hands and sound." |
-| 4 | Tools & why | log.md scrolling | "Every stage is logged with its model, because in Jua every result explains itself. The music was generated, the voice never." |
-| 5 | Difficulties | 2–3 rejected takes side by side | "[Real struggle, e.g. video models kept making her blink; I rejected N takes.]" |
-| 6 | Difficulties | [screen] | "[Second real struggle, e.g. finding a photo and someone who could speak truthfully about it.]" |
-| 7 | Learned | the silence beat | "[Real lesson, e.g. restraint is the effect — the strongest moment is when the music stops.]" |
-| 8 | Better | Jua UI / sleeve | "[Real improvement, e.g. record the testimony first and let the community add names to photos themselves.]" |
-| 9 | Payoff | end card | "We can restore the image. We remember the person together." |
+| 1 | Inspiration | worn original | "Old family photos keep faces but lose names. I wanted a film about the one thing AI can't restore." |
+| 2 | What it is | original → restored split | "Jua — More Than a Photograph: AI restores a woman's face; only a living voice can give back her name." |
+| 3 | How I built it | node graph of the pipeline | "Locked references, a restoration in stages, one frozen-face motion shot, hands and sound, then a score that resolves on the name." |
+| 4 | Tools used | model names on screen | "All in Arcads: GPT Image and Nano Banana to restore, Veo and Seedance for motion, ElevenLabs and Suno for music." |
+| 5 | Challenges | rejected takes side by side | "[Real, e.g. video models kept making her blink — I rejected N takes; finding a true testimony.]" |
+| 6 | Proud of | the silence beat | "[Real, e.g. the moment the music stops and a real voice says her name.]" |
+| 7 | What I learned | restoration log | "[Real, e.g. limbic narration is restraint — breath, touch and silence move people more than any effect.]" |
+| 8 | What's next | Jua UI | "Bring this into Jua: restore archives with families, and let communities write the names back themselves." |
 
-Clip prompts for explainer B-roll (if any are generated), one locked STYLE line pasted into every block:
+Cutaway B-roll prompts (only if you need generated inserts), one locked STYLE line pasted into every block:
 ```
 STYLE REFERENCE: match the attached frame exactly — warm late daylight, wooden table, paper grain, honey #D9A35F / paper #F4EAD5 palette.
 SCENE: {one action for this beat}. MOTION: {one camera move}.

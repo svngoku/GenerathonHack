@@ -1,7 +1,0 @@
-shot,start_s,end_s,function,framing,camera,action,emotion_evidence,refs,stills,video,fallback,status
-01,0,4,Hook,extreme close-up hands,static,cold hands press against a dark window,blue light; exhaustion,character+location,03_stills/shot_01_start.png,04_video/shot_01_v01.mp4,still + slow digital push,todo
-02,4,10,Establish need,medium wide kitchen,static,Amara drops her bag and leans on the counter; eyes shut,curled posture; empty room,character+location,03_stills/shot_02_start.png,04_video/shot_02_v01.mp4,still + ken burns,todo
-03,10,17,Reveal product,close-up counter,slow push-in,takes the mug from the shelf and pours from the kettle,mug recognizable; steam faint,product+location,03_stills/shot_03_start.png,04_video/shot_03_v01.mp4,product still + steam overlay,todo
-04,17,26,TRIGGER / proof,close-up hands + mug,static,both hands wrap the mug; sun ray lights the steam gold,cause -> effect: warmth arrives,character+product+location,03_stills/shot_04_start.png|03_stills/shot_04_end.png,04_video/shot_04_v01.mp4,crossfade start->end + light leak,review
-05,26,35,Reaction,medium close-up face,slow push-in,closes her eyes and exhales; shoulders drop; faint smile,comfort unmistakable; amber room,character+location,03_stills/shot_05_start.png|03_stills/shot_05_end.png,04_video/shot_05_v01.mp4,still + grade shift,todo
-06,35,42,Packshot + tagline,product hero,static,mug sharp; Amara soft out of focus on window seat,product + feeling remembered,product+location+character,03_stills/shot_06_hero.png,04_video/shot_06_v01.mp4,locked still,todo
