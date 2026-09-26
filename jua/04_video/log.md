@@ -100,3 +100,16 @@ Assembly: `06_edit/cut_v06_voiceElisa.mp4` (2:45.5, 1080p, −14.4 LUFS), rebuil
 - **Dissolves:** 0:38 (1 s), 0:56 (1.2 s), 1:08 (1 s), 1:18 (1.5 s), **1:32.5 (3 s)**, 1:53.5 and 2:11.5 (1.5 s). The hard cuts from 0:00 to 0:38 are kept, as approved.
 - **Music:** "Pitié" cue A runs over film 0:10–1:36 and fades out under "je fais ton avenir". About 1 s of silence follows, then the voice at 1:37. Cue B (song 2:05.5) enters at 2:13 on "Pitié toi mon amour", as the name is written.
 - **Voice:** placeholder, the v05 Elisa take (metropolitan French), to be replaced by the accented voice. The swap is a rebuild with a new `voice_paced` file (`v06/pace_voice.py`, one TTS file per line placed at the subtitle times). Spend this round: 48 credits.
+
+## Round v07: Marty asked for "the name written by the video model" plus a final collage ("try both, I pick")
+**Rule exception:** CLAUDE.md forbids generated lettering. Marty chose to test an override against the hybrid. The override take is kept only if every letter is right. The end card discloses it.
+
+| shot | model | prompt | refs | file | verdict |
+|---|---|---|---|---|---|
+| name A (override) | seedance-2.5, 12s 720p, audio | IMAGE REFERENCES + IDENTITY LOCK + MOTION "writes the name 'Mama Nzeba' in neat cursive dark-blue ink … spelled exactly M-a-m-a N-z-e-b-a" + NEGATIVE (no second pen, no other letters) | kf05_f, hands_sheet, K1 (no sleeve ref) | b461988f-1425-4249-bc9a-037845fe48d1 → `04_video/seedance25/name_A_override.mp4` (504) | **CANDIDATE**: final frame reads "Mama Nzeba" (cursive capital N); print face stable; one pen |
+| name B (mime, for the hybrid) | same, "pen glides just above the surface … no ink, no letters" | same | same | 51153bc0-8f8d-4b67-9442-dde1248d6953 → `name_B_mime.mp4` (504) | REJECT: wrote pencil gibberish anyway; erase + bake attempt (`name_hybrid.py`) left patches because exposure drifts. The v06 hybrid (`06_edit/v05/shot05_named.mp4`) remains the hybrid option |
+| collage base | Pillow over locked table (colour-matched to the shot-05 table): original, restored, K2, K3, sleeve with baked Caveat name | — | locked/*, K2, K3 | `06_edit/collage/base_collage.png` | base |
+| collage KF | nano-banana-2 ×2, edit of base: "Change ONLY the realism … pixel-faithful … same handwriting" | — | base | a: 64e5a73b… (turned prints sepia) REJECT · b: 7d6c6217… → faces slightly redrawn → `relock.py` pastes the locked print pixels back (tone-matched, feathered) → `kf_collage_b_locked.png` | **KEEP b (re-locked)** |
+| collage | seedance-2.5 ×2, 10s, audio: slow pull-back, window light drifts, nothing moves | IMAGE REFERENCES + IDENTITY LOCK + NEGATIVE | kf_collage_b_locked | A: 40707173-4282-48be-9d3f-1c9dbea70831 → `collage_A.mp4` (420) · B: a0ff2639-2cc6-49c8-8e5c-a0d0e61c538a → `collage_B.mp4` (420) | **KEEP A** (from 1.5 s every print is inside the frame; light sweep); B pulls back into a dark floor. Local fallback: `06_edit/collage/collage_local.mp4` |
+
+Comparison for Marty: `04_video/seedance25/name_compare_A_vs_hybrid.mp4`. Spend this round: 2,352 credits.

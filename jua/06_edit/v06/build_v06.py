@@ -15,7 +15,7 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 VOICE, OUT = sys.argv[1], sys.argv[2]
 SD, V5 = "../../04_video/seedance25", "../v05"
 P = "../../05_audio/reference/tabu_ley_pitie.mp3"
-T = json.load(open("timeline.json"))
+T = json.load(open(os.environ.get("TIMELINE", "timeline.json")))
 B, SEG, VO, CUE_A, CUE_B = T["bounds"], T["segments"], T["voice_start"], T["cue_a"], T["cue_b"]
 sh = lambda c: subprocess.run(c, check=True)
 X = lambda k: 0 if k == 0 else max(SEG[k]["xin"], 1 / 24)   # a hard cut is a 1-frame fade (xfade needs overlap)
@@ -52,6 +52,7 @@ from PIL import Image
 subs = json.load(open(f"{V5}/subs.json")); caps = json.load(open("lyric_caps.json"))
 ov = [(f"{V5}/sub_{i}.png", VO + a, VO + b, 0.25) for i, (a, b, _) in enumerate(subs)]
 ov += [(f"lyr_{i}.png", c["t0"], c["t1"], 0.6) for i, c in enumerate(caps)]
+ov += [(n["png"], n["t0"], n["t1"], 0.6) for n in T.get("notes", [])]
 inp, fc, last = ["-i", "picture.mp4"], [], "[0:v]"
 for i, (png, a, b, f) in enumerate(ov):
     im = Image.open(png); x0, y0, x1, y1 = im.getbbox(); x0 -= x0 % 2; y0 -= y0 % 2
