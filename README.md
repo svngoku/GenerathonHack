@@ -13,7 +13,7 @@ An old family photograph from **Kinshasa, early 1970s**: cracked, faded, the wom
 
 ## Why it answers the challenge: limbic narration
 No narrator, no explaining voice-over. The story reaches the emotional brain through the senses:
-- **Sound:** paper and room tone → a four-note motif that never resolves → total silence on a breath → the motif resolves under the pen.
+- **Sound:** paper and room tone → Tabu Ley's rumba guitar rises under the restoration → total silence on a breath → the song returns, warmer, under the pen.
 - **Touch:** a thumb on the print's edge, a pen that hesitates before writing.
 - **Memory:** the only words are the witness's, spoken inside the room, with a sensory detail (a smell, a song, a fabric), not facts read from a script.
 
