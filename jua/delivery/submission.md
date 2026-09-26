@@ -28,6 +28,7 @@ Alternates: "We can restore the image. We remember the person together." (58) ·
 ---
 
 ## 🗣️ Explainer video script (≈ 85s at a calm pace; limit 1:30)
+> Production framework (9 blocks, B-roll, thumbnail concepts + QA): see `explainer_thumbnail.md`. The draft below is the short version.
 Replace every [bracket] with what actually happened — the jury rewards honesty about struggles.
 
 **What it's about (15s)**

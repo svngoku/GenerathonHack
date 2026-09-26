@@ -83,12 +83,24 @@ CHECKPOINT: send the cut + a muted-viewing verdict per beat.
 
 ## 8 · Critic pass
 ```
-Phase 8. Critic pass on jua/06_edit/cut_v[NN].mp4 against brief.md and CLAUDE.md. Score 0–5: muted readability, honesty (original visible, face unaltered, no invented facts, disclosures present), first 3 seconds, testimony clarity, music–story sync, continuity. List only blocking issues, each with the smallest fix and its credit cost.
+Phase 8. Critic pass on jua/06_edit/cut_v[NN].mp4 against brief.md and CLAUDE.md. For each check give PASS / PARTIAL / FAIL + a one-line reason:
+1. restoration accuracy — face identical across original → stages → motion shot
+2. motion restraint — no blink, mouth or head movement in shot 03
+3. no invented facts — every name, place and detail traces to the witness or research.md
+4. no generated lettering — the name is real handwriting or a baked overlay
+5. sound — silence starts on the first breath at 38s; the motif resolves at the handoff
+6. muted readability at 10s / 38s / 58s / 75s
+7. disclosures present (fictional / colour) as brief.md requires
+8. first 3 seconds make you want to keep watching
+List only FAIL/PARTIAL items, each with the smallest fix and its credit cost.
 ```
 
 ## 9 · Delivery
 ```
-Phase 9. Final QA from generathon-emotion-ad-production-kit.md §6. Then fill jua/delivery/submission.md: final YouTube link [URL], explainer link [URL], a thumbnail from shot 06 (1280×720, → jua/delivery/thumbnail.png), contributors, and the explainer script with my real struggles taken from the logs (list them for me to confirm — don't invent any). Commit, push, and give me the exact form fields to paste.
+Phase 9. Final QA from generathon-emotion-ad-production-kit.md §6. Then, following jua/delivery/explainer_thumbnail.md:
+- Thumbnail: pitch me 5 concepts (A–E), generate my pick (2 variants), bake any text afterwards, run the thumbnail QA → jua/delivery/thumbnail.png
+- Explainer: pull my real struggles from the log.md files and rejected takes, list them for me to confirm (don't invent any), then fill the 9 script blocks and a B-roll list
+Fill jua/delivery/submission.md with the final YouTube link [URL] and explainer link [URL]. Commit, push, and give me the exact form fields to paste.
 ```
 
 ---

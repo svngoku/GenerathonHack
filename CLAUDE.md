@@ -18,7 +18,8 @@ AI restores a face; only people can give back a name. **Absence → curiosity �
 - **Never invent** a name, place, date, clothing fact or biography. Unknown → `[TODO: ask Marty]`.
 - **Restore, never re-create:** each restoration stage takes the previous stage as input; reject any output where the face drifts.
 - **Nobody in the photograph moves their face or speaks.** Talking-actor / omnihuman / audio_driven models are forbidden on the portrait.
-- No generated lettering — names and titles are real handwriting or edit overlays.
+- No generated lettering — names and titles are real handwriting or baked overlays (method in prompts.md, shot 05).
+- Follow the 6 prompt rules and the IDENTITY LOCK at the top of `jua/01_bible/prompts.md` in every generation.
 - Original is shown before and beside the restoration, never replaced by it. Colour, if used, is disclosed.
 - Fictional mode → end card: "Fictional proof of concept. No real person is depicted."
 
