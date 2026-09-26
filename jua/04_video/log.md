@@ -122,3 +122,15 @@ Comparison for Marty: `04_video/seedance25/name_compare_A_vs_hybrid.mp4`. Spend 
 | pacing | `06_edit/v06/pace_take.py` | one continuous take; only the gaps between lines move, to the film's line grid; subtitle times rewritten from the real audio | — | `voice_paced_fatou.wav` / `_dolamade.wav` + `subs_*.json` | the voice is 5.5 dB louder than Elisa, so voice_gain drops from 3.5 to 1.85 |
 
 Assembly: `06_edit/cut_v08_fatou.mp4` (main) and `cut_v08_dolamade.mp4` (the voice Marty asked for), built with `TIMELINE=timeline_v08.json SUBS=subs_<voice>.json build_v06.py voice_paced_<voice>.wav`.
+
+## Round v09: the face comes alive at 1:53–2:12 (Marty: "make her smile and eyes blinking")
+**Rule exception:** CLAUDE.md says nobody in the photograph moves their face. Marty overrode it. The end card now says: "Her blink and smile: AI animation of the restored portrait (Kling 3.0 Pro)."
+
+| shot | model | prompt | refs | file | verdict |
+|---|---|---|---|---|---|
+| face 20 s ×2 | seedance-2.5, 720p, no audio | IMAGE REFERENCES + IDENTITY LOCK + blink, then a closed-lip smile | kf_face (a crop of locked/restored), restored.png | A 78b48db7… / B 8b0c12ed… → `06_edit/face_anim/face_A,B.mp4` (840 each) | REJECT both: they start from the full print (ref 2), push in, and end on a rounder, different face |
+| face 10 s ×2 | seedance-2.5, only kf_face as reference | same, still camera | kf_face | 5bf356f5… (still rendering, unused) · 997627ef… → `face10_D.mp4` (420 each) | REJECT: Seedance 2.5 does not use image 1 as the first frame; it re-frames and re-draws her from frame 0 |
+| face 10 s ×2 | **kling-3.0-pro**, true start frame = kf_face | "photograph quietly comes to life … blinks slowly once … small, tender closed-lip smile … no talking, no teeth, no camera move" | start frame kf_face | A 080ccdbc-6de9-4123-870b-d0000ccc5050 → `kling_A.mp4` · B d54b59c8-e5f3-43bf-8a31-54fe1aaf468d → `kling_B.mp4` (400 each, 1080p) | **KEEP A** (warmer smile; same woman). B is the subtler alternative, closest to the locked face |
+| face beat | local composite `face_anim/face_alive.py` | locked pixels for 9.5 s (push 1.00→1.03), then Kling A at 1.03 | kf_face | `face_anim/face_alive.mp4` (19.5 s) | the join is invisible (Δ 2.96 vs 2.27 between ordinary frames). The blink falls on "Cette photo…" and the smile builds to "On s'en souvient, Mama" |
+
+Spend this round: 3,320 credits.
