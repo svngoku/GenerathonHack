@@ -48,3 +48,20 @@ Rule adopted: **every frame is built from `locked/`.** Faces come only from K1 p
 Music link (local only, never uploaded): rough "Pitié" bed from `05_audio/reference/tabu_ley_pitie.mp3` — cue A = song 0:00–0:28 at film 10–38s (2s fade-in, hard cut at 38s); silence 38–58s; cue B = song 3:47–4:04 (its own outro) at film 58–75s (1s fade-out). Picked from a 4s RMS loudness profile (opening = quietest build; ending = the song's own resolution) — **confirm by ear**. End card now credits *Music: Tabu Ley Rochereau, "Pitié"*. Placeholder name overlay "[her name]" at 66.5–70s.
 
 Assembly: `06_edit/animatic_v03.mp4` (75.00s, 854x480). v03 spend: 544 credits.
+
+## Phase 2 v04 — Seedance 2.5 for 04/05, Higgsfield prompt rules, nothing cut at the frame edge
+Marty: "try with seedance 2.5 … follow the prompts from the skills of higgsfield … some elements are cut in the middle".
+Higgsfield skills read from github.com/higgsfield-ai/skills (`higgsfield-generate/references/prompt-engineering.md`, `media-inputs.md`, `model-catalog.md`): Seedance 2.5 is the default all-purpose video model; use reference mode with the opening frame as a reference; for image-to-video, describe motion only and don't re-describe the frame; prompts under ~200 tokens; phrase positively.
+Framing fixes: base frames rebuilt so print, sleeve and pen sit fully inside with margin (`keyframes/base04_v3.png`, `base05_v3.png`); 01 pan re-pathed so her head never leaves frame; 03 push ends headwrap→knees.
+
+| shot | model | prompt | refs | file | verdict |
+|---|---|---|---|---|---|
+| KF04 v3 | nano-banana-2 ×2, edit of base04_v3 | "Change ONLY: add the two hands … fingertips on the lower corners … whole print fully visible" | base04_v3, hands_sheet | `keyframes/kf04_e.png` (1f01e082-a599-435c-9750-b82866367019) KEEP · `kf04_f.png` (96986bc1…) alt | KEEP e — whole print visible, hands match the lock set |
+| KF05 v3 | nano-banana-2 ×2, edit of base05_v3 | "Change ONLY: add the hands … right hand picks up the pen … only one pen" | base05_v3, hands_sheet | `kf05_e.png` (ce993eaf…) REJECT (2 pens) · `kf05_f.png` (dcf5d026-3ec5-4f76-a78d-d98cbe8516c4) KEEP | KEEP f |
+| 04 A | seedance-2.5, 20s, 720p, audio on | IMAGE REFERENCES (opening frame, hands, print, table) + IDENTITY LOCK + MOTION (thumb along the edge) + AUDIO + NEGATIVE | kf04_e, hands_sheet, K1, table | asset 6a47453e-c25b-421b-a5f7-8a96ffd05c66 → `04_video/seedance25/shot04_A.mp4` (840 cr) | **KEEP** — whole print in frame, locked hands, print face stable 0→20s, room sound |
+| 04 B | same | same | same | asset de7b13c8-9f9f-4495-b135-633cff9748e4 → `shot04_B.mp4` (840 cr) | ALT — equally clean, print framed slightly lower |
+| 05 A | seedance-2.5, 12s, 720p, audio on | refs + motion "hesitates, then writes one short word"; NEGATIVE "second pen" | kf05_f, hands_sheet, K1, sleeve | asset 00dac01e-10e1-40d3-bff4-c7b5218f6e47 → `shot05_A.mp4` (504 cr) | REJECT raw — re-added the second pen from the sleeve ref |
+| 05 B | same | same | same | asset c6a21778-9561-4dbd-b7ab-0429b83f2ee4 → `shot05_B.mp4` (504 cr) → `shot05_B_penfix.mp4` | **KEEP (fixed)** — same extra pen, removed locally by compositing the keyframe's empty table over that area (static camera); scribble illegible |
+
+Lesson: a sleeve reference that contains a pen gets copied even with "second pen" in NEGATIVE — for the final shot 05 use a sleeve reference without the pen.
+Assembly: `06_edit/animatic_v04.mp4` (75.00s), built by `06_edit/animatic/assemble_v04.sh` (local "Pitié" bed as in v03; name placeholder moved clear of the hands). v04 spend: 2,688 credits.

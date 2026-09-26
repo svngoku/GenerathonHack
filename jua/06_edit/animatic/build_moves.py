@@ -16,5 +16,5 @@ def frames(c0,w0,c1,w1,n,band=False):
             pos=-0.3*W+1.6*W*(i/(n-1)); d=(xs+0.35*ys-pos)/(0.22*W); b=np.exp(-d*d)*0.22
             fr=fr*(1-b[...,None])+(fr*0.6+warm*0.55)*b[...,None]
         sys.stdout.buffer.write(np.clip(fr,0,255).astype(np.uint8).tobytes())
-if sys.argv[1]=="01": frames((1400,600),900,(950,330),700,10*FPS)
-if sys.argv[1]=="03": frames((960,540),1920,(950,310),640,10*FPS,band=True)
+if sys.argv[1]=="01": frames((1300,520),900,(960,450),1100,10*FPS)
+if sys.argv[1]=="03": frames((960,540),1920,(955,440),860,10*FPS,band=True)
