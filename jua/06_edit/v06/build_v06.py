@@ -75,8 +75,16 @@ j = len(ai) // 2
 ai += ["-i", VOICE]; ms = int(VO * 1000)
 fc.append(f"[{j}:a]aresample=48000,aformat=channel_layouts=stereo,highpass=f=90,aecho=0.8:0.4:35:0.15,volume={T['voice_gain']},adelay={ms}|{ms}[vo]"); amix.append("[vo]")
 for n, c in (("ma", CUE_A), ("mb", CUE_B)):
+    if not c: continue
     j += 1; ai += ["-ss", str(c["song_in"]), "-t", str(c["dur"]), "-i", P]; ms = int(c["film_at"] * 1000)
-    fc.append(f"[{j}:a]aresample=48000,aformat=channel_layouts=stereo,volume={c['vol']},afade=t=in:d={c['fade_in']},afade=t=out:st={c['dur']-c['fade_out']}:d={c['fade_out']},adelay={ms}|{ms}[{n}]"); amix.append(f"[{n}]")
+    # optional ducking: [[film_t, gain], ...] linearly interpolated (keeps the music under the voice instead of stopping it)
+    if c.get("duck"):
+        pts = [(ft - c["film_at"], g) for ft, g in c["duck"]]; e = str(pts[0][1])
+        for (t0, g0), (t1, g1) in zip(pts, pts[1:]):
+            e = f"if(gte(t,{t0}),{g0}+({g1}-{g0})*min(1,(t-{t0})/{max(t1-t0,0.01)}),{e})"
+        vol = f"volume='{e}':eval=frame"
+    else: vol = f"volume={c['vol']}"
+    fc.append(f"[{j}:a]aresample=48000,aformat=channel_layouts=stereo,{vol},afade=t=in:d={c['fade_in']},afade=t=out:st={c['dur']-c['fade_out']}:d={c['fade_out']},adelay={ms}|{ms}[{n}]"); amix.append(f"[{n}]")
 TOTAL = B[-1]
 fc.append(f"{''.join(amix)}amix=inputs={len(amix)}:normalize=0,apad=whole_dur={TOTAL},atrim=0:{TOTAL},loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[a]")
 sh([FF, "-loglevel", "error", "-y", *ai, "-filter_complex", ";".join(fc), "-map", "[a]", "-ar", "48000", "-t", str(TOTAL), "mix.wav"])
