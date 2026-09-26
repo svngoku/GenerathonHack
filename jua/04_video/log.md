@@ -70,3 +70,19 @@ Assembly: `06_edit/animatic_v04.mp4` (75.00s), built by `06_edit/animatic/assemb
 | shot | model | prompt | refs | file | verdict |
 |---|---|---|---|---|---|
 | inside | none — local macro drifts (`04_video/local/inside_photo.py`), 18s, 1920x1080 | face+headwrap → folded hands → liputa → torn edge pulling back to the whole print, 0.5s dissolves | locked/original.png (K1 pixels only) | `04_video/local/shot_inside_photo.mp4` | KEEP — zero drift by construction |
+
+## Cut v05 (2:36) — 3-minute direction, Marty: "approved, keep the script, disclosed AI voice, add others images from the base as 'Souvenir', one ref truly REALISTIC"
+`locked/restored.png` = K1 stage 3 (approved). Voice: Arcads TTS (ElevenLabs), disclosed on the end card.
+
+| shot | model | prompt | refs | file | verdict |
+|---|---|---|---|---|---|
+| voice | Arcads TTS, voice "Elisa" (Young, Calm, FR) ×1 | 05_audio/script.md (hum removed: TTS can't hum) | — | asset 080fcc74-bc95-47a8-bea6-2e918ef3b21c → `05_audio/voice/testimony_elisa.wav` (22s, 8 cr) → paced to 37s (`06_edit/v05/voice_paced.wav`) | **KEEP** — slower, more room for breath |
+| voice | Arcads TTS, voice "Gloria" (Young, Calm, FR) | same | — | asset c78686df-93c1-45fd-a76b-12372e5427df → `testimony_gloria.wav` (19s, 8 cr) | ALT — faster, less intimate |
+| souvenirs KF | nano-banana-2 ×2, edit of `06_edit/souvenirs/base_souvenirs.png` (K1 + K2 + K3 prints on locked table) | "Change ONLY: make it a true photograph, fully realistic … add the hands from image 2 … keep the three women … pixel-faithful" | base, hands_sheet | `souvenirs/kf_souv_a.png` (afc022db-5683-43a4-b37b-85db461e5274) KEEP · `kf_souv_b.png` (c944c3eb…) | KEEP a — photoreal, grey cuffs kept; b drops the cuffs |
+| souvenirs | seedance-2.5 ×2, 12s 720p, audio | IMAGE REFERENCES + IDENTITY LOCK + MOTION (slide the centre print closer, light band) + AUDIO + NEGATIVE | kf_souv_a, hands_sheet, K1 | A: 21b0e5a1-61b5-40e9-a870-7df8ef500e48 → `04_video/seedance25/souvenirs_A.mp4` (504) · B: 7d932c4b-22db-4ac1-aa37-06dae32689e6 (504, still rendering at cut time) | **KEEP A** — all faces frozen, prints stay in frame |
+| back of print | seedance-2.5 ×2, 10s | hands turn the print over; back plain, faint illegible pencil | kf04_e, hands_sheet | A: 20e4cddf-8088-42e6-b12a-544d6c741974 → `back_A.mp4` (420) · B: be592a0e-9e73-4711-88c5-19b5c4ef7d79 → `back_B.mp4` (420) | **KEEP A** — her face visible mid-turn, blank back; B flatter |
+| room | seedance-2.5 ×2, 8s | static, sunlight shifts across the table, distant Kinshasa | locked room_plate (K2) | A: 3d398e9a-d578-41a9-973a-e7bd725e9cd2 → `room_A.mp4` (336) · B: 5cc3fdea-5caf-4950-a81d-1bd2cc6f9ac5 → `room_B.mp4` (336) | **KEEP A** — light moves; B similar |
+| name | none — baked handwriting (Caveat, OFL, `06_edit/v05/OFL_caveat.txt`) on shot05_B_penfix, revealed with the pen, only on paper pixels | "Mama Nzeba" | — | `06_edit/v05/shot05_named.mp4` | KEEP — no generated lettering |
+| locals | Pillow+ffmpeg | restoration beat (stages + captions + wipe), 1080p moves 01/03, inside-photo, slow push on restored face, side by side, end card | locked/ only | `06_edit/v05/*.py` | KEEP |
+
+Assembly: `06_edit/cut_v05.mp4` (2:36, 1920x1080, 48 kHz, loudnorm −14 LUFS), rebuilt by `06_edit/v05/build_v05.sh`. "Pitié" (local only): song 0:00–1:16 at 0:10–1:26, silence under the voice 1:26–2:03, song 3:31–4:04 at 2:03–2:36. Spend this round: ~3,030 credits.

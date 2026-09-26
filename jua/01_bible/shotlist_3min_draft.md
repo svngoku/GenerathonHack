@@ -13,3 +13,19 @@ Rule for every new frame: built only from `locked/` (K1 print pixels, hands_shee
 | 09 | 2:25–2:45 | **The name** — the young hand writes it on the sleeve (real handwriting overlay), slides the print in | Seedance 2.5 (sleeve ref without pen) | pen; "Pitié" returns |
 | 10 | 2:45–2:55 | **Belonging** — the sleeved print placed among the family's things `[TODO: what/where?]` | locked set + new plate if approved | "Pitié" resolves |
 | 11 | 2:55–3:00 | Original + restored side by side, end line, disclosures, music credit | locked stills | music out |
+
+
+## As built in cut v05 (2:36)
+| Time | Beat | Source |
+|---|---|---|
+| 0:00–0:10 | pan over the print on the table | local over K1 |
+| 0:10–0:28 | restoration stages 1–3 with captions, wipe back | 03_restore stages |
+| 0:28–0:38 | push toward her | local over K1 |
+| 0:38–0:56 | inside the photograph (face, hands, liputa, torn edge → whole print) | local over K1 |
+| 0:56–1:08 | Souvenirs — K1 among K2/K3 prints, hands slide hers closer | Seedance 2.5 on photoreal keyframe |
+| 1:08–1:18 | the back of the print (blank, illegible marks) | Seedance 2.5 |
+| 1:18–1:26 | the room in Kinshasa, light moving | Seedance 2.5 on room_plate |
+| 1:26–2:03 | "Pitié" cuts — the voice (AI, disclosed) + EN subtitles; hands on the print, then slow push on the restored face | Seedance 2.5 04 A + local |
+| 2:03–2:15 | "Mama Nzeba" written on the sleeve; "Pitié" returns | Seedance 2.5 05 B + baked handwriting |
+| 2:15–2:27 | original | restored side by side | local |
+| 2:27–2:36 | end line + disclosures + music credit | local |
