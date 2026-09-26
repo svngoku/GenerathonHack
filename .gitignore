@@ -13,3 +13,6 @@ project/**/*.webm
 project/**/*.wav
 project/**/*.mp3
 project/**/*.m4a
+
+# Rejected takes: kept by Arcads asset ID in 04_video/log.md, not in git
+jua/04_video/rejected/*.mp4
