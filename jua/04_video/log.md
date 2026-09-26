@@ -86,3 +86,17 @@ Assembly: `06_edit/animatic_v04.mp4` (75.00s), built by `06_edit/animatic/assemb
 | locals | Pillow+ffmpeg | restoration beat (stages + captions + wipe), 1080p moves 01/03, inside-photo, slow push on restored face, side by side, end card | locked/ only | `06_edit/v05/*.py` | KEEP |
 
 Assembly: `06_edit/cut_v05.mp4` (2:36, 1920x1080, 48 kHz, loudnorm −14 LUFS), rebuilt by `06_edit/v05/build_v05.sh`. "Pitié" (local only): song 0:00–1:16 at 0:10–1:26, silence under the voice 1:26–2:03, song 3:31–4:04 at 2:03–2:36. Spend this round: ~3,030 credits.
+
+## Round v06 (Marty: African-accented voice, scenes linked to the "Pitié" lyrics, smooth 1:21→1:27)
+| shot | model | prompt | refs | file | verdict |
+|---|---|---|---|---|---|
+| voice catalogue | Arcads `list_voices` (499 female voices) | metadata has no accent field; 16 French voices, all standard names | — | `scratchpad` only | no voice is labelled African-accented. The Gemini accent check (`analyze_media`) failed server-side 5×, with "audio too large" and then URL-fetch timeouts, and was refunded |
+| voice tests | Arcads TTS ×5 (ElevenLabs): Amara, Thandiwe, Nia, Lerato, Zanele (English-catalogue voices reading the French script) | script.md, French | — | `05_audio/voice/accent_tests/tts_*.wav` + `accent_tests_5voices.mp3` (order as listed, ~14 s each). Assets 836c5948, 71a0027d, 7d49956d, 9d65286d, 2280dd75 (8 cr each) | **for Marty's ear**. None is Congolese by design. Marty proposes his ElevenLabs voice **Monique**, who says "Kobosana te" well |
+| voice-id test | Arcads TTS with an ElevenLabs voice id that is NOT in the Arcads list (premade 21m00Tcm4TlvDq8ikWAM) | "Kobosana te." | — | asset 88520ae2 (8 cr) | works: any ElevenLabs voice id can be passed. **Waiting for Monique's voice id** |
+| lyric map | local Whisper large-v3-turbo (sherpa-onnx, GitHub release); the song never leaves the container | — | reference mp3 | `05_audio/pitie_lyrics_map.md` | line timings ±1 s; cue A moved to song 0:06→film 0:10 so the lines land on their scenes |
+| room bridge | Pillow+ffmpeg (no generation) | room_A + 8.8 s hold, one slow push-in 1.0→1.3× to the table | room_A | `06_edit/v06/room_push.mp4` | KEEP |
+
+Assembly: `06_edit/cut_v06_voiceElisa.mp4` (2:45.5, 1080p, −14.4 LUFS), rebuilt by `06_edit/v06/build_v06.py <voice> <out>` from `timeline.json` + `lyric_caps.json`.
+- **Dissolves:** 0:38 (1 s), 0:56 (1.2 s), 1:08 (1 s), 1:18 (1.5 s), **1:32.5 (3 s)**, 1:53.5 and 2:11.5 (1.5 s). The hard cuts from 0:00 to 0:38 are kept, as approved.
+- **Music:** "Pitié" cue A runs over film 0:10–1:36 and fades out under "je fais ton avenir". About 1 s of silence follows, then the voice at 1:37. Cue B (song 2:05.5) enters at 2:13 on "Pitié toi mon amour", as the name is written.
+- **Voice:** placeholder, the v05 Elisa take (metropolitan French), to be replaced by the accented voice. The swap is a rebuild with a new `voice_paced` file (`v06/pace_voice.py`, one TTS file per line placed at the subtitle times). Spend this round: 48 credits.

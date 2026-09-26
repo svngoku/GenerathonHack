@@ -29,3 +29,14 @@ Rule for every new frame: built only from `locked/` (K1 print pixels, hands_shee
 | 2:03–2:15 | "Mama Nzeba" written on the sleeve; "Pitié" returns | Seedance 2.5 05 B + baked handwriting |
 | 2:15–2:27 | original | restored side by side | local |
 | 2:27–2:36 | end line + disclosures + music credit | local |
+
+## As built in cut v06 (2:45.5) — changes from v05
+| Time | Beat | Change |
+|---|---|---|
+| 0:27.5 | print, restored | lyric caption *Pitié toi mon amour, pitié toi mon cœur* |
+| 0:38 / 0:56 / 1:08 / 1:18 | inside photo, souvenirs, back of print, room | dissolves instead of hard cuts |
+| 0:56.5 | souvenirs (hands before the photos) | lyric caption *Devant ta photo je me recueille* (the song is sung here) |
+| 1:18–1:34 | room, then one slow push-in to the empty table | *Qu'importe le temps… Le soir je vais revenir… je fais ton avenir*; 3 s dissolve into the hands with the print |
+| 1:32–1:37 | hands on the print | music fades out, about 1 s of silence, then the voice (1:37–2:13) |
+| 2:11.5–2:23.5 | name on the sleeve | "Pitié toi mon amour" returns (second verse) |
+| 2:23.5–2:45.5 | side by side, end card | unchanged |

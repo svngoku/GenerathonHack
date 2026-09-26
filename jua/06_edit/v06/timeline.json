@@ -1,0 +1,21 @@
+{
+  "bounds": [0, 10, 28, 38, 56, 68, 78, 92.5, 113.5, 131.5, 143.5, 155.5, 165.5],
+  "segments": [
+    {"name": "move_01",     "src": "$V5/move_01.mp4",                          "xin": 0},
+    {"name": "restoration", "src": "$V5/shot02_restoration.mp4",               "xin": 0},
+    {"name": "move_03",     "src": "$V5/move_03.mp4",                          "xin": 0},
+    {"name": "inside",      "src": "../../04_video/local/shot_inside_photo.mp4","xin": 1.0},
+    {"name": "souvenirs",   "src": "$SD/souvenirs_A.mp4",                      "xin": 1.2, "vol": 0.5},
+    {"name": "back",        "src": "$SD/back_A.mp4",                           "xin": 1.0, "vol": 0.6},
+    {"name": "room_push",   "src": "room_push.mp4",                            "xin": 1.5, "vol": 0.6},
+    {"name": "shot04",      "src": "$SD/shot04_A.mp4",                         "xin": 3.0, "vol": 0.35, "speed": 1.16},
+    {"name": "face",        "src": "local_face.mp4",                           "xin": 1.5},
+    {"name": "named",       "src": "$V5/shot05_named.mp4",                     "xin": 1.5, "vol": 0.6},
+    {"name": "side",        "src": "$V5/local_side.mp4",                       "xin": 0},
+    {"name": "end",         "src": "$V5/local_end.mp4",                        "xin": 0}
+  ],
+  "voice_start": 95.5,
+  "voice_gain": 3.5,
+  "cue_a": {"song_in": 6,     "film_at": 10,  "dur": 86,   "fade_in": 2,   "fade_out": 4, "vol": 0.5},
+  "cue_b": {"song_in": 125.5, "film_at": 133, "dur": 32.5, "fade_in": 1.5, "fade_out": 4, "vol": 0.5}
+}
