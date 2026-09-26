@@ -1,5 +1,21 @@
 # Score — Jua (Arcads `/v1/music/generate`: suno_v6 to audition, elevenlabs for exact-length finals)
 
+## Reference track: Tabu Ley Rochereau, "Pitié" (4:12)
+Marty's choice for the film's soul: 1970s Congolese rumba. It sets the photo's place and era (**Kinshasa**) and the instrument (**clean rumba guitar**, with a sebene feel held back).
+
+**Rights: read before using it in the film.** "Pitié" is a commercially released, copyrighted recording (Tabu Ley's estate and publishers). Without a licence:
+- YouTube Content ID will likely claim it, even on an unlisted upload. The video can be **muted or blocked in some countries, so the jury might not be able to play it.**
+- The kit's rules (§1) and the honesty spirit of the film both say: no unlicensed music.
+
+| Use | OK? |
+|---|---|
+| Temp track in the animatic / rough cuts (internal only) | ✅ |
+| Mood and style reference for writing our own cues | ✅ (never upload it to a generator, never copy its melody) |
+| In the submitted film | ❌ unless licensed in writing (publisher / estate); log it in licenses.md |
+| **Documentary mode:** the witness says "she loved Tabu Ley" or hums a few bars from memory, in the room | ⚠️ the memory itself is powerful and true; keep any hum very short and ask an organizer whether it's acceptable |
+
+**Keep the mp3 local.** Don't commit it (copyright, size) and don't upload it to Arcads.
+
 ## The musical idea
 A **four-note motif that never finishes** while she is unknown. It stops completely when the real voice speaks. When the name is written, the motif **returns and finally lands on its last note**. The melody finds its home when she gets her name back.
 
@@ -24,6 +40,8 @@ Keep A and B the same instrument, **key and tempo** so they sound like one piece
 | Unsure | ask Marty — don't default to a "generic African" sound |
 
 ## Prompts
+**Chosen direction (from "Pitié"):** [INSTRUMENT] = clean, warm Congolese rumba electric guitar, 1970s Kinshasa tone (light reverb, a little tape warmth); [PLACE] = Kinshasa. Our motif is **original**: style only, no melody or phrase from the reference.
+
 **Audition (suno_v6, `instrumentalOnly: true`, nbGenerations 1 = 2 tracks, duration 30):**
 ```
 Solo [INSTRUMENT] from [PLACE], intimate close-mic recording, D minor, 60 BPM. A simple four-note motif that repeats but never resolves, long pauses between phrases, like someone trying to remember a face. Sparse, hesitant, warm room ambience. No drums, no bass, no vocals, no build, no cinematic swell.
