@@ -1,3 +1,5 @@
+> **Superseded:** track names, durations and the "assigned emotion" here are out of date — `jua/00_brief/official_rules.md` is the source of truth. Kept for the method (§2) and the final QA checklist (§6).
+
 # Generathon #2 — Emotion-first production kit
 
 Ready-to-fill resource template for September 26–27, 2026. Event: [Generathon #2](https://luma.com/ywjzbr8t?tk=JJPMJQ). Reference workflow: [Higgsfield commercial prompt breakdown](https://higgsfield.ai/blog/ai-commercial-youtube-guide). The event offers short film (maximum 3 minutes), animation with a marked visual-atmosphere shift (maximum 2 minutes), and a physical-product ad; teams of 1–3 submit by Sunday 14:00. The emotion is described as “chosen” by the event, so do not lock a final emotion until the kickoff briefing. [web:1][web:2]

@@ -1,6 +1,6 @@
 # Generathon #2 — agent instructions
 
-Deadlines: **Sun 2026-09-27 — soft 13:30 (stop & upload), hard 14:00** (internal cutoff 12:00). Active project: **`jua/`** — "Jua — More Than a Photograph", track **Three Minutes to Move — Short Film**, challenge **"Limbic Narration, Not Just a Voice-Over"**, 75s, 16:9. `project/` (First Light) is a fallback only.
+Deadlines: **Sun 2026-09-27 — soft 13:30 (stop & upload), hard 14:00** (internal cutoff 12:00). Active project: **`jua/`** — "Jua — More Than a Photograph", track **Three Minutes to Move — Short Film**, challenge **"Limbic Narration, Not Just a Voice-Over"**, 75s, 16:9.
 
 ## Read first, in order
 0. `jua/00_brief/official_rules.md` — organizers' rules, deliverables, judging (overrides everything)
