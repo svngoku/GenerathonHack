@@ -1,6 +1,6 @@
 # Visual bible — Jua
 
-Most of this film is **real**: the print, the hands, the voice, the screen recording. AI touches only the restoration (UmoJua) and one restrained motion shot. That ratio is the point.
+Most of this film is **real**: the print, the hands, the voice. AI (in Arcads, prompted as Jua's pipeline) touches only the staged restoration and one restrained motion shot. That ratio is the point.
 
 ## Look
 | Beat | Light | Palette | Texture |
