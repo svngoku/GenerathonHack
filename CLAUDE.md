@@ -28,6 +28,7 @@ AI restores a face; only people can give back a name. **Absence → curiosity �
 - Fictional mode → end card: "Fictional proof of concept. No real person is depicted."
 
 ## How to work
+- **Jev first, then the LLM — on every request from Marty.** Run `python3 jua/tools/jev_route.py "<his message>"` before acting. Use its `phase` to open the right section of AGENT_PROMPTS.md and obey every line in `rules` (refuse face motion on the portrait, confirm hard-to-reverse steps, check credits, gate facts). If `low_confidence` is non-empty, ask Marty one short question instead of guessing. Mention the route in one line of your reply.
 - Use the Arcads MCP (discover tools live; the `arcads:media-router` skill helps). Check credits before each batch.
 - Every final-candidate generation: **2 variants in parallel**, then pick with a one-line verdict each.
 - Consistency comes from `jua/locked/` — pass the same reference set to every call. Promote an asset to `locked/` only after Marty approves it.
