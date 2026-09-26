@@ -59,7 +59,7 @@ NEGATIVE: legible generated letters, extra fingers, camera movement.
 
 ## Fictional mode only — generated portrait (seedream_5_pro A/B nano-banana-2) → `locked/original.png`
 ```
-Black-and-white studio portrait photograph, [FICTIONAL PLACE], [YEAR]. A woman in her thirties, seated, three-quarter view, calm direct gaze, [DRESS FROM 02_source/research.md]. Plain painted studio backdrop. Authentic print wear: faded contrast, fine scratches, a crease across one corner, a slightly torn edge. Silver-gelatin grain, uninhabited background, untouched by any modern element. An original fictional person, not a real individual.
+Black-and-white studio portrait photograph, Kinshasa, early 1970s, in the tradition of Kinshasa studio portraiture. A woman in her thirties, seated, three-quarter view, calm direct gaze, [DRESS FROM 02_source/research.md]. Plain painted studio backdrop. Authentic print wear: faded contrast, fine scratches, a crease across one corner, a slightly torn edge. Silver-gelatin grain, uninhabited background, untouched by any modern element. An original fictional person, not a real individual.
 ```
 Then run the staged restoration on it exactly as you would on a real photo.
 

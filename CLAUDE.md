@@ -17,6 +17,7 @@ AI restores a face; only people can give back a name. **Absence → curiosity �
 
 ## Hard rules (stop and ask rather than break one)
 - **No narrator / voice-over.** The only spoken words are the witness's, inside the scene (limbic narration: breath, touch, silence, a sensory memory).
+- **Afro-rooted and specific:** Kinshasa, Lingala, Congolese rumba ("Pitié"), the Kinshasa studio-portrait tradition; see `jua_context.md` § Afro roots. Never generic "African".
 - **Never invent** a name, place, date, clothing fact or biography. Unknown → `[TODO: ask Marty]`.
 - **Restore, never re-create:** each restoration stage takes the previous stage as input; reject any output where the face drifts.
 - **Nobody in the photograph moves their face or speaks.** Talking-actor / omnihuman / audio_driven models are forbidden on the portrait.

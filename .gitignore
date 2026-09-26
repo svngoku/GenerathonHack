@@ -16,3 +16,6 @@ project/**/*.m4a
 
 # Rejected takes: kept by Arcads asset ID in 04_video/log.md, not in git
 jua/04_video/**/rejected/*.mp4
+
+# Reference music: local only, never commit or upload to Arcads
+jua/05_audio/reference/
