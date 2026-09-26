@@ -9,6 +9,8 @@ Deadline: **Sunday 2026-09-27, 14:00** (internal cutoff 12:00). Active project: 
 4. `jua/01_bible/shotlist.csv`, `visual_bible.md`, `prompts.md`
 5. `jua/05_audio/score.md` — the music tells the story too (motif resolves when the name is written)
 
+Phase-by-phase prompts: `jua/AGENT_PROMPTS.md` (0 kickoff → 9 delivery).
+
 ## The story in one line
 AI restores a face; only people can give back a name. **Absence → curiosity → belonging.** The climax is a real human voice, never an AI effect.
 
