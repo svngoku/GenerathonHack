@@ -57,7 +57,7 @@ Use omni-flash on jua/04_video/shot_[NN]_v[XX].mp4: [exact problem, e.g. "the pr
 
 ## 5 · Testimony + subtitles
 ```
-Phase 5. [DOCUMENTARY] Transcribe jua/05_audio/testimony.[m4a]. Write jua/05_audio/subtitles_en.srt and _fr.srt timed to 38–58s. Mark every name, place and non-English word as [CHECK] — don't guess spellings. Use Arcads captions if the MCP exposes them; otherwise produce the SRT.
+Phase 5. [DOCUMENTARY] Transcribe jua/05_audio/testimony.[m4a]. Write the verbatim transcript to jua/05_audio/transcript.md (this is the evidence file for the honesty gate), then jua/05_audio/subtitles_en.srt and _fr.srt timed to 38–58s. Mark every name, place and non-English word as [CHECK] — don't guess spellings. Use Arcads captions if the MCP exposes them; otherwise produce the SRT.
 [FICTIONAL] Draft jua/05_audio/script.md: 3–4 plain, spoken-sounding sentences — her name, the place, ONE sensory detail (a smell, a song she hummed, the fabric she wore, a sound from her kitchen). No grand claims, no narration. A consenting person will say it in the room — recorded with room acoustics and breath, not close-mic studio.
 [BOTH] Remind me: record the witness in the room, keep the breaths and pauses, and ask whether she used to hum or sing something — record that too (score.md cue B).
 CHECKPOINT: show me the text.
@@ -93,6 +93,9 @@ Phase 8. Critic pass on jua/06_edit/cut_v[NN].mp4 against brief.md and CLAUDE.md
 6. muted readability at 10s / 38s / 58s / 75s
 7. disclosures present (fictional / colour) as brief.md requires
 8. first 3 seconds make you want to keep watching
+Run the honesty gate on every text in the cut (end card, subtitles):
+  python3 jua/tools/honesty_check.py claims <file> --evidence jua/05_audio/transcript.md jua/02_source/research.md
+Anything not "verified" counts as a FAIL for check 3.
 List only FAIL/PARTIAL items, each with the smallest fix and its credit cost.
 ```
 
@@ -100,7 +103,8 @@ List only FAIL/PARTIAL items, each with the smallest fix and its credit cost.
 ```
 Phase 9. Final QA from generathon-emotion-ad-production-kit.md §6. Then, following jua/delivery/explainer_thumbnail.md:
 - Thumbnail: pitch me 5 concepts (A–E), generate my pick (2 variants), bake any text afterwards, run the thumbnail QA → jua/delivery/thumbnail.png
-- Face cam explainer (≤ 60s, 8 required items): pull my real challenges, wins and lessons from the log.md files and rejected takes, list them for me to confirm (don't invent any), fill the 8 script blocks (~150 words), and export the pipeline node-graph cutaway
+- Face cam explainer (≤ 60s, 8 required items): pull my real challenges, wins and lessons from the log.md files and rejected takes, list them for me to confirm (don't invent any), fill the 8 script blocks (~150 words) into jua/delivery/explainer_script.md, and export the pipeline node-graph cutaway
+- Honesty gate before I record: `python3 jua/tools/honesty_check.py coverage jua/delivery/explainer_script.md` (all 8 items ok) and `... claims jua/delivery/explainer_script.md --evidence jua/03_restore/log.md jua/04_video/log.md jua/05_audio/transcript.md` (every fact traced to a log)
 Fill jua/delivery/submission.md with the final YouTube link [URL] and explainer link [URL]. Commit, push, and give me the exact form fields to paste.
 ```
 

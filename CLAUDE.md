@@ -24,6 +24,7 @@ AI restores a face; only people can give back a name. **Absence → curiosity �
 - No generated lettering — names and titles are real handwriting or baked overlays (method in prompts.md, shot 05).
 - Follow the 6 prompt rules and the IDENTITY LOCK at the top of `jua/01_bible/prompts.md` in every generation.
 - Original is shown before and beside the restoration, never replaced by it. Colour, if used, is disclosed.
+- **Honesty gate (TypeSafe):** before any text ships (subtitles, end card, explainer, submission), run `jua/tools/honesty_check.py` — every factual sentence must come back `verified` against the transcript / research / logs. Needs `TYPESAFE_API_KEY`.
 - Fictional mode → end card: "Fictional proof of concept. No real person is depicted."
 
 ## How to work
