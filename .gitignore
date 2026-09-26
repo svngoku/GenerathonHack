@@ -1,3 +1,15 @@
 .env
 .DS_Store
 .claude/settings.local.json
+
+# Media lives in hf://buckets/Svngoku/generathon-tech-arcads (scripts/assets.sh)
+project/**/*.png
+project/**/*.jpg
+project/**/*.jpeg
+project/**/*.webp
+project/**/*.mp4
+project/**/*.mov
+project/**/*.webm
+project/**/*.wav
+project/**/*.mp3
+project/**/*.m4a
