@@ -65,3 +65,8 @@ Framing fixes: base frames rebuilt so print, sleeve and pen sit fully inside wit
 
 Lesson: a sleeve reference that contains a pen gets copied even with "second pen" in NEGATIVE — for the final shot 05 use a sleeve reference without the pen.
 Assembly: `06_edit/animatic_v04.mp4` (75.00s), built by `06_edit/animatic/assemble_v04.sh` (local "Pitié" bed as in v03; name placeholder moved clear of the hands). v04 spend: 2,688 credits.
+
+## 3-min extension — beat "inside the photograph" (0:36–0:55)
+| shot | model | prompt | refs | file | verdict |
+|---|---|---|---|---|---|
+| inside | none — local macro drifts (`04_video/local/inside_photo.py`), 18s, 1920x1080 | face+headwrap → folded hands → liputa → torn edge pulling back to the whole print, 0.5s dissolves | locked/original.png (K1 pixels only) | `04_video/local/shot_inside_photo.mp4` | KEEP — zero drift by construction |

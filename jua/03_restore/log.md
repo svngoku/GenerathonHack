@@ -1,21 +1,16 @@
-# Restoration log — every result explains itself (phase 3, redo on P2)
+# Restoration log — every result explains itself (phase 3 on K1, Kinshasa 1972)
 
-Mode: FICTIONAL proof of concept — Brazzaville, 1890. No real person is depicted.
-Input: `locked/original.png` = P2 (seedream_5_pro, asset 80ab873f-4198-4edc-8add-208b9af110a4), untouched.
-Template: prompts.md stage template — `IMAGE REFERENCES: image 1 = previous stage; image 2 = original (identity only)` + IDENTITY LOCK + `Change ONLY: [stage]… pixel-faithful where undamaged.`
-Each stage: gpt-image-2-5-sunburst AND nano-banana-2 from the same previous stage; keep the one with less face drift (eyes, nose, mouth, jaw, hairline). Candidates in `03_restore/ab/`.
-Earlier variant-A run: `superseded_variantA/log.md`.
-
-Format: `stage | step | model | prompt | file | verdict`
+Mode: FICTIONAL proof of concept. Input: `locked/original.png` = K1 (seedream_5_pro, asset 3334cbcf-0ed1-4598-825a-b40642aa02d1).
+Template: prompts.md stage template (IMAGE REFERENCES + IDENTITY LOCK + "Change ONLY … pixel-faithful where undamaged"). Each stage A/B: gpt-image-2-5-sunburst vs nano-banana-2 from the same previous stage. Earlier runs: `superseded_P2/`, `superseded_variantA/`.
 
 | stage | step | model | prompt | file | verdict |
 |---|---|---|---|---|---|
-| 1 | dust & specks | gpt-image-2-5-sunburst | template, change = "remove dust, specks and small spots" | `ab/stage_1_sunburst.png` (42a437c1-f922-468e-be9d-64cafecdf479, 1920x1072) | REJECT — face reframed/enlarged, brow harder, deeper shadows |
-| 1 | dust & specks | nano-banana-2 | same | `ab/stage_1_nano.png` → `stage_1_dust.png` (41b51f86-d124-42a9-a9c3-a437c06c9bf4, 2752x1536) | KEEP — eyes, nose, lips, jaw, hairline match original; torn corner kept; slightly cooler |
-| 2 | cracks & tears | gpt-image-2-5-sunburst | template, change = "repair the cracks, crease and torn edge by continuing the surrounding texture" | `ab/stage_2_sunburst.png` (458dedb5-7a73-4270-99dd-837cc7827090, 1920x1072) | REJECT — face rounder and darker, heavier shadows |
-| 2 | cracks & tears | nano-banana-2 | same | `ab/stage_2_nano.png` → `stage_2_cracks.png` (44cb3395-7a98-46c6-9338-320aa1ff67e5) | KEEP — face matches stage 1; torn corner and edge repaired; faint pink cast on backdrop |
-| 3 | clarity | gpt-image-2-5-sunburst | template, change = "recover sharpness and contrast so the face reads clearly, as a well-preserved print of the same negative; monochrome warm albumen tone, natural grain, natural skin texture" ("black-and-white" → "monochrome warm albumen tone" per research fact 5) | `ab/stage_3_sunburst.png` (3534ca12-642f-4cab-9891-18c79c93260f, 1920x1072) | REJECT — heavier brow, rounder face, stronger shadows |
-| 3 | clarity | nano-banana-2 | same | `ab/stage_3_nano.png` → `stage_3_clarity.png` (829ed8d7-53ca-4280-b27c-e866723fb804) | KEEP — eyes, nose, mouth, jaw, hairline match stage 2 and original; sharper; fine dot-screen texture on skin at full size; skin slightly darker from contrast |
-| 4 | colour | — | skipped (not requested) | — | — |
+| 1 | dust & specks | gpt-image-2-5-sunburst | template, change = "remove dust, specks and small spots" | `ab/stage_1_sunburst.png` (a5692979-7737-4298-9649-b01182583f89) | REJECT — face softer and rounder |
+| 1 | dust & specks | nano-banana-2 | same | `stage_1_dust.png` (7bfc1e3a-8751-4526-af2d-d70c0d12daf6) | KEEP — eyes, nose, mouth, jaw, headwrap match K1 |
+| 2 | cracks & tears | gpt-image-2-5-sunburst | "repair the cracks, crease and torn edge…" | `ab/stage_2_sunburst.png` (4797d6c7-adc1-4674-ae8b-1a8309a4d004) | REJECT — face shape shifts |
+| 2 | cracks & tears | nano-banana-2 | same | `stage_2_cracks.png` (83106d13-77ab-40b4-9413-dc84f2d3fe91) | KEEP — face unchanged vs stage 1; torn edge repaired |
+| 3 | clarity | gpt-image-2-5-sunburst | "recover sharpness and contrast … black-and-white, natural grain, natural skin texture" | `ab/stage_3_sunburst.png` (384db841-5dc3-41d5-8635-741fc4cbf044) | REJECT — face rounder, heavier |
+| 3 | clarity | nano-banana-2 | same | `stage_3_clarity.png` (78a7a614-4869-4980-a6ad-312caa742910) | KEEP — sharper, identity matches K1; fine texture on skin at full size |
+| 4 | colour | — | skipped | — | — |
 
-Result: nano-banana-2 won every stage (sunburst drifted each time). Shot 02 captions: `stage N · step · Nano Banana 2`. `stage_3_clarity.png` → `locked/restored.png` **on Marty's approval**. Credits for phase 3: 0 (daily image limit).
+Nano Banana 2 won all three stages. Shot captions: `stage N · step · Nano Banana 2`. stage 3 → `locked/restored.png` on Marty's approval. Credits: 0.
