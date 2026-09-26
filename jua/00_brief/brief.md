@@ -6,13 +6,14 @@
 - Duration: **75s** target (60–90s window; event max 3 min)
 - Aspect: 16:9 (YouTube submission) · Language: testimony in [NATIVE LANGUAGE], subtitles EN/FR
 - Thesis: restoration can recover a **face**; only people can recover a **name, a place, a story**. The AI is visible, honest, and never the climax.
+- Production: **100% Arcads**, prompted as Jua's pipeline ("Make, restore, and keep the story together" · "Every result explains itself"). See `jua_context.md`.
 
 ## The two assets that decide everything (find before generating anything)
 | Asset | Needed | Status |
 |---|---|---|
 | **The photograph** | one real family/community photo, specific place + year: [PLACE], [YEAR] | [ ] |
 | **The witness** | one person who can say her name, place, and ONE ordinary true detail (what she made, a phrase she used, where she gathered people) | [ ] |
-| Permission | photo owner + witness agree to film use & upload to UmoJua/Arcads (written or recorded "yes") | [ ] |
+| Permission | photo owner + witness agree to film use & upload to Arcads (written or recorded "yes") | [ ] |
 
 Have both → documentary mode. Missing either by **Saturday 15:00** → **fictional proof-of-concept mode** (below).
 

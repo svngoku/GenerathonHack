@@ -17,7 +17,7 @@ Alternates: "We can restore the image. We remember the person together." (58) ·
 **Thumbnail:** frame from shot 06 — original (left) and restored (right) side by side on the table, the hand-written name visible on the sleeve. No generated text; optional small title in the end-card serif. 1280×720.
 
 **Contributors:**
-- Marty Niongolo — AI Engineer: concept, direction, UmoJua restoration pipeline, AI motion, edit
+- Marty Niongolo — AI Engineer: concept, direction, Jua restoration pipeline (run in Arcads), AI motion, edit
 - [WITNESS NAME] — memory & voice (with consent) *(or omit if they prefer privacy)*
 - [PHOTO OWNER] — photograph courtesy of *(if different)*
 
@@ -31,10 +31,10 @@ Alternates: "We can restore the image. We remember the person together." (58) ·
 Replace every [bracket] with what actually happened — the jury rewards honesty about struggles.
 
 **What it's about (15s)**
-"I build UmoJua, a tool that restores and animates old photographs. For this film I wanted to show what restoration can — and can't — recover. AI can make a face visible again. It can't give her back her name. Only people can."
+"I build Jua, a workspace to make, restore, and keep the story together for African heritage images. For this film I wanted to show what restoration can — and can't — recover. AI can make a face visible again. It can't give her back her name. Only people can."
 
 **Tools and why (20s)**
-"UmoJua for the restoration, because it's my own pipeline and I can show every stage. [Arcads / model] for one restrained motion shot and the subtitles. Everything else is real: a real print, real hands, a real voice, filmed on my phone. The ratio was deliberate."
+"Everything generated ran in Arcads, using the same models as Jua's pipeline — Nano Banana and GPT Image for a restoration in stages, [Kling / Veo] for one restrained motion shot, Arcads captions for the subtitles. Each stage shows its model on screen, because in Jua every result explains itself. The voice is real — that part AI can't do."
 
 **Difficulties (20s)**
 "The hardest part wasn't technical — it was [finding the photo and someone who could speak about it truthfully / deciding what the AI is *not* allowed to do]. Video models kept trying to make the face smile or blink; I had to reject [N] takes. [Tool setup struggle, e.g. connecting the Arcads MCP to my agent workflow.]"
