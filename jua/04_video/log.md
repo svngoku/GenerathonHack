@@ -134,3 +134,10 @@ Assembly: `06_edit/cut_v08_fatou.mp4` (main) and `cut_v08_dolamade.mp4` (the voi
 | face beat | local composite `face_anim/face_alive.py` | locked pixels for 9.5 s (push 1.00→1.03), then Kling A at 1.03 | kf_face | `face_anim/face_alive.mp4` (19.5 s) | the join is invisible (Δ 2.96 vs 2.27 between ordinary frames). The blink falls on "Cette photo…" and the smile builds to "On s'en souvient, Mama" |
 
 Spend this round: 3,320 credits.
+
+## Round v10: a deeper 1:19–1:30 ("the scene doesn't look deep enough")
+| shot | model | prompt | refs | file | verdict |
+|---|---|---|---|---|---|
+| return home | seedance-2.5 ×2, 16s 720p, audio | evening; a slow dolly-in from the doorway; the granddaughter, seen only from behind in a grey long-sleeved top, walks in holding the print, lays it on the table by the window and sits; the camera ends above her shoulder on the photo. Audio: footsteps, chair, distant Kinshasa evening | room plate (room_A ref 0), hands_sheet, K1 | A 2769e5ca-6e48-4db0-9f76-f8e6d7bf2b9d → `04_video/seedance25/return_A.mp4` · B aebbb56c-1ab9-4ac0-8623-0b174c5c48dd → `return_B.mp4` (672 each) | **KEEP B**: pale grey top matches the hands in shot 04; her face is never shown; ends on the photo, which motivates the dissolve to the overhead hands. A REJECT: she wears a wax-print wrap and then a headwrap, so she reads as Mama Nzeba, which breaks continuity |
+
+It replaces `room_push` in `timeline_v10.json`, playing under the lyric *Le soir je vais revenir… je fais ton avenir*. Spend this round: 1,344 credits.
