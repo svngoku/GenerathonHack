@@ -7,6 +7,7 @@ Deadline: **Sunday 2026-09-27, 14:00** (internal cutoff 12:00). Active project: 
 2. `jua/00_brief/brief.md` — arc, mode, honesty rules, emotion variants
 3. `jua/01_bible/model_map.md` — which Arcads model does which job (verified API limits)
 4. `jua/01_bible/shotlist.csv`, `visual_bible.md`, `prompts.md`
+5. `jua/05_audio/score.md` — the music tells the story too (motif resolves when the name is written)
 
 ## The story in one line
 AI restores a face; only people can give back a name. **Absence → curiosity → belonging.** The climax is a real human voice, never an AI effect.
