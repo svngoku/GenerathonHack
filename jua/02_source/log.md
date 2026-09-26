@@ -1,4 +1,6 @@
-# Phase 1 log — source + lock set (full redo, new phase order)
+# Phase 1 log — source + lock set
+
+**Current: Kinshasa 1972 (section at the bottom).** Everything above it is the superseded Brazzaville 1890 run (files moved to `02_source/superseded_brazzaville1890/`).
 
 Format: `item | model | prompt | refs | file | verdict`. Nothing here is in `locked/` until Marty approves.
 Research first: `02_source/research.md` (web-search summaries only; full texts blocked by network policy).
@@ -27,3 +29,19 @@ Palette ref: `01_bible/palette.png` (#9AA3A8 → #D9A35F, paper #F4EAD5), upload
 Open `[TODO: ask Marty]`: hair; how the pagne is worn / any top; studio vs improvised backdrop; brass neck ring; cloth pattern (all four portraits show modern-looking wax-print patterns, unverified for 1890); where the young person's room is (both plates read European); skin tone / ring / sleeve of the young hands.
 
 Superseded: `02_source/portrait_variant_A/B.png`, `03_restore/stage_*`, `locked/original.png`, `locked/restored.png` and the shot-03 work came from the pre-research run. They stay until Marty picks the new portrait, then `locked/` is replaced and phase 3 reruns.
+
+
+## Kinshasa 1972 redo (Marty: "confirmed, redo for Kinshasa 1972, room in Kinshasa")
+Research: `02_source/research.md` (authenticité from Jan 1972; liputa in wax print; wigs/straightening targeted, plaits/braids/headwraps kept; headwrap from same cloth [low-medium]; Studio 3Z opened 1971 in Kitambo). Hands, table, sleeve and palette stay locked; the room is redone.
+
+Portrait prompt (prompts.md fictional template; [DRESS] from research.md; "clearly visible" wear added because the animatic showed the damage didn't read):
+> Black-and-white studio portrait photograph, Kinshasa, 1972, in the tradition of Kinshasa studio portraiture. A woman in her thirties, seated on a wooden chair, three-quarter view, calm direct gaze, wearing a wax-print liputa wrapped from waist to ankle, a fitted blouse, and a headwrap cut from the same cloth. Plain painted studio backdrop. Clearly visible authentic print wear: faded contrast, dust specks, fine scratches, a crease across one corner, a slightly torn edge. Silver-gelatin grain, uninhabited background, untouched by any modern element, text-free. An original fictional person, not a real individual.
+
+| item | model | prompt | refs | file | verdict |
+|---|---|---|---|---|---|
+| K1 portrait | seedream_5_pro | portrait prompt | — | `02_source/portrait_k72/K1_seedream.jpg` (3334cbcf-0ed1-4598-825a-b40642aa02d1, 2048x1152) | RECOMMENDED — follows research, no added jewellery, visible specks/scratches, torn right edge |
+| K2 portrait | seedream_5_pro | same | — | `portrait_k72/K2_seedream.jpg` (4577a006-5cdf-4c82-ba5e-dc0b3f743ed0) | GOOD — more frontal, slightly larger face; lighter damage |
+| K3 portrait | nano-banana-2 | same | — | `portrait_k72/K3_nano.png` (373fcc09-8c46-4811-8a56-22b48f4b4b43) | GOOD — full matching-cloth set, heaviest wear; adds earrings (unresearched) |
+| K4 portrait | nano-banana-2 | same | — | `portrait_k72/K4_nano.png` (a58c3efa-d715-4ad6-b474-167991931601) | REJECT — portrait card on white canvas; invented necklace + bracelets |
+| room K1 | nano-banana-2 | room plate: "a modest family home in Kinshasa today", window LEFT, warm late light | palette | `lockset_k72/room_k1.png` (5cc2e44e-d42f-4212-a31e-71c65087aa74) | OK — plausible, more generic (rattan chair, sliding window) |
+| room K2 | nano-banana-2 | same | palette | `lockset_k72/room_k2.png` (6d5118d5-2b4b-45dd-8710-d32bf0511289) | RECOMMENDED — barred window, worn plaster, tiled floor; less European. Unsourced details `[TODO: ask Marty]` |
