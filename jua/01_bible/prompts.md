@@ -1,6 +1,6 @@
 # Prompts — Jua (all run in Arcads; context in `00_brief/jua_context.md`)
 
-## Shot 02 — staged restoration (Arcads image edit: Nano Banana Edit / GPT Image 2)
+## Shot 02 — staged restoration (gpt-image-2-5-sunburst, A/B nano-banana-2 — see model_map.md)
 Always feed the **previous stage** as input, never regenerate from text. After each stage, append a line to `03_restore/log.md`: `stage | step | model | prompt | file`.
 
 Shared lock (prepend to every stage):
@@ -18,7 +18,7 @@ RESTORATION, NOT RE-CREATION. Keep the exact same person, face shape, features, 
 
 Reject a stage if the face identity drifts. Compare side by side with the previous stage.
 
-## Shot 03 — restrained motion (Arcads Kling / Veo / Seedance image-to-video)
+## Shot 03 — restrained motion (veo31 startFrame, alt kling-3.0 / seedance-2.5)
 Input: `locked/restored.png` (real photos: only with the owner's permission to upload to Arcads).
 ```
 CONSTRAINTS: Render ONLY what is described. The person in the photograph does NOT move: no blinking, no smiling, no lip or head movement, no change in expression or identity. No added text, props, color, or background changes.
@@ -26,13 +26,13 @@ Duration 6s, 16:9. The photograph lies on a wooden table. Slow, steady camera pu
 ```
 Roll 2 variants; reject any take where the face changes.
 
-## Fictional mode only — generated portrait → `locked/original.png`
+## Fictional mode only — generated portrait (seedream_5_pro A/B nano-banana-2) → `locked/original.png`
 ```
 Black-and-white studio portrait photograph, [FICTIONAL PLACE], [YEAR]. A woman in her thirties, seated, three-quarter view, calm direct gaze, [HEADWRAP / CLOTHING TYPICAL OF THAT PLACE AND DECADE — research, don't guess]. Plain painted studio backdrop. Authentic print wear: faded contrast, fine scratches, a crease across one corner, slightly torn edge. Silver-gelatin grain. No text, no watermark, no modern elements. An original fictional person, not a real individual.
 ```
 Then run the staged restoration above on it exactly as you would a real photo.
 
-## Fictional mode only — hands on table B-roll (Arcads image/video)
+## Fictional mode only — hands on table B-roll (seedance-2.5, refs: hands_sheet + table_close)
 ```
 CONSTRAINTS: Live motion video. Render ONLY what is described. No text, logos, or extra objects.
 Top-down, 16:9, warm late daylight on a worn wooden table. A young person's hands slide an old black-and-white portrait print out of a paper sleeve and lay it flat. Natural hand anatomy, five fingers each. Static camera. 5s.

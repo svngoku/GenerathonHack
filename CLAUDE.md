@@ -1,0 +1,32 @@
+# Generathon #2 — agent instructions
+
+Deadline: **Sunday 2026-09-27, 14:00** (internal cutoff 12:00). Active project: **`jua/`** — "Jua — More Than a Photograph", track *Two Minutes to Move*, 75s, 16:9. `project/` (First Light) is a fallback only.
+
+## Read first, in order
+1. `jua/00_brief/jua_context.md` — what Jua is and how it shapes the story
+2. `jua/00_brief/brief.md` — arc, mode, honesty rules, emotion variants
+3. `jua/01_bible/model_map.md` — which Arcads model does which job (verified API limits)
+4. `jua/01_bible/shotlist.csv`, `visual_bible.md`, `prompts.md`
+
+## The story in one line
+AI restores a face; only people can give back a name. **Absence → curiosity → belonging.** The climax is a real human voice, never an AI effect.
+
+## Hard rules (stop and ask rather than break one)
+- **Never invent** a name, place, date, clothing fact or biography. Unknown → `[TODO: ask Marty]`.
+- **Restore, never re-create:** each restoration stage takes the previous stage as input; reject any output where the face drifts.
+- **Nobody in the photograph moves their face or speaks.** Talking-actor / omnihuman / audio_driven models are forbidden on the portrait.
+- No generated lettering — names and titles are real handwriting or edit overlays.
+- Original is shown before and beside the restoration, never replaced by it. Colour, if used, is disclosed.
+- Fictional mode → end card: "Fictional proof of concept. No real person is depicted."
+
+## How to work
+- Use the Arcads MCP (discover tools live; the `arcads:media-router` skill helps). Check credits before each batch.
+- Every final-candidate generation: **2 variants in parallel**, then pick with a one-line verdict each.
+- Consistency comes from `jua/locked/` — pass the same reference set to every call. Promote an asset to `locked/` only after Marty approves it.
+- Log every generation in `jua/03_restore/log.md` (restoration) or `jua/04_video/log.md` (video): `shot | model | prompt | refs | file | verdict`.
+- Save outputs to the folder named in `shotlist.csv`; update its `status` column (`todo → draft → approved`).
+- **Checkpoints — stop and show Marty:** after the animatic, after restoration stages, after each hero shot, after music. Don't run ahead.
+- Commit + push after each checkpoint (`feat(jua): shot 03 takes v01-v02`). Keep each video file < 100 MB.
+
+## Definition of done
+Muted, a stranger reads: worn photo → face becomes clear → a name is written. With sound: the music stops and a real voice says who she was. `jua/delivery/submission.md` filled, YouTube link unlisted and playable.
