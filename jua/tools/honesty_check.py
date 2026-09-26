@@ -36,6 +36,8 @@ def sentences(text):
     text = re.sub(r"```.*?```", " ", text, flags=re.S)
     out = []
     for line in text.splitlines():
+        if line.lstrip().startswith("#"):  # headings are labels, not claims
+            continue
         line = " ".join(re.sub(r"^[#>*\-|\s\d.]+", "", line).replace("|", " ").replace("**", "").split())
         if not line or "-->" in line or "[" in line:  # [brackets] = not yet filled, skip
             continue
@@ -94,7 +96,7 @@ def check_coverage(path):
 
 
 def selftest():
-    s = sentences("# Title\n| 1 | Hook | \"AI can bring back a face from a photo.\" |\n12\n00:00:01,000 --> 00:00:03,000\n"
+    s = sentences("# Title that is long enough here\n| 1 | Hook | \"AI can bring back a face from a photo.\" |\n12\n00:00:01,000 --> 00:00:03,000\n"
                   "[Real struggle, e.g. blink]\nShe sold fabric at the market in Kinshasa. Short one.")
     assert s == ['Hook "AI can bring back a face from a photo."', "She sold fabric at the market in Kinshasa."], s
     assert verdict({"choice": "supports", "confidence": 0.9}) == "verified"
