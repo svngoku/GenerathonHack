@@ -2,8 +2,8 @@
 # Media (images, video, audio) lives in the Hugging Face bucket, not in git.
 # Git keeps only text: brief, bible, prompts, shotlist, QC logs.
 #
-#   scripts/assets.sh push      upload project/ media to the bucket
-#   scripts/assets.sh pull      download bucket media into project/
+#   scripts/assets.sh push      upload jua/ media to the bucket
+#   scripts/assets.sh pull      download bucket media into jua/
 #   scripts/assets.sh status    dry-run both directions
 #   scripts/assets.sh migrate   push, verify, then untrack media from git
 #
@@ -11,8 +11,8 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-BUCKET="${HF_BUCKET:-hf://buckets/Svngoku/generathon-tech-arcads}/project"
-LOCAL=project
+BUCKET="${HF_BUCKET:-hf://buckets/Svngoku/generathon-tech-arcads}/jua"
+LOCAL=jua
 MEDIA=(--include '*.png' --include '*.jpg' --include '*.jpeg' --include '*.webp'
        --include '*.mp4' --include '*.mov' --include '*.webm'
        --include '*.wav' --include '*.mp3' --include '*.m4a'
