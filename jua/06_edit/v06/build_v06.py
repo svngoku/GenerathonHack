@@ -73,7 +73,7 @@ for k, s in enumerate(SEG):
     fc.append(f"[{j}:a]afade=t=in:d={din:.3f},afade=t=out:st={lens[k]-dout:.3f}:d={dout:.3f},adelay={ms}|{ms}[d{k}]"); amix.append(f"[d{k}]")
 j = len(ai) // 2
 ai += ["-i", VOICE]; ms = int(VO * 1000)
-fc.append(f"[{j}:a]aresample=48000,aformat=channel_layouts=stereo,highpass=f=90,aecho=0.8:0.4:35:0.15,volume={T['voice_gain']},adelay={ms}|{ms}[vo]"); amix.append("[vo]")
+fc.append(f"[{j}:a]aresample=48000,aformat=channel_layouts=stereo,highpass=f=90,aecho=0.8:0.4:35:0.15,volume={T['voice_gain']},adelay={ms}|{ms},asplit=2[vo][vosc]"); amix.append("[vo]")
 for n, c in (("ma", CUE_A), ("mb", CUE_B)):
     if not c: continue
     j += 1; ai += ["-ss", str(c["song_in"]), "-t", str(c["dur"]), "-i", P]; ms = int(c["film_at"] * 1000)
@@ -86,6 +86,14 @@ for n, c in (("ma", CUE_A), ("mb", CUE_B)):
     else: vol = f"volume={c['vol']}"
     fc.append(f"[{j}:a]aresample=48000,aformat=channel_layouts=stereo,{vol},afade=t=in:d={c['fade_in']},afade=t=out:st={c['dur']-c['fade_out']}:d={c['fade_out']},adelay={ms}|{ms}[{n}]"); amix.append(f"[{n}]")
 TOTAL = B[-1]
+if T.get("sidechain") and "[ma]" in amix:
+    amix.remove("[ma]"); fc.append(f"[vosc]apad[vosk];[ma][vosk]sidechaincompress=threshold=0.015:ratio=6:attack=120:release=1100:makeup=1[mad]"); amix.append("[mad]")
+else:
+    fc.append("[vosc]anullsink")
+# optional room-tone bed (never digital silence): very low brown noise, low-passed, over [from, to]
+if T.get("roomtone"):
+    a, b, g = T["roomtone"]; ms = int(a * 1000)
+    fc.append(f"anoisesrc=color=brown:sample_rate=48000:amplitude=1:duration={b-a},lowpass=f=700,volume={g},afade=t=in:d=2,afade=t=out:st={b-a-2}:d=2,aformat=channel_layouts=stereo,adelay={ms}|{ms}[rt]"); amix.append("[rt]")
 fc.append(f"{''.join(amix)}amix=inputs={len(amix)}:normalize=0,apad=whole_dur={TOTAL},atrim=0:{TOTAL},loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[a]")
 sh([FF, "-loglevel", "error", "-y", *ai, "-filter_complex", ";".join(fc), "-map", "[a]", "-ar", "48000", "-t", str(TOTAL), "mix.wav"])
 

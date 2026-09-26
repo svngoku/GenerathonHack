@@ -69,6 +69,25 @@ IMAGE REFERENCES: image 1 = palette swatch.
 SCENE: top-down, 16:9, warm late daylight on a worn wooden table; a young person's hands, [SKIN TONE, RING, SLEEVE], shown in three panels: resting flat, holding a small print, holding a pen. Natural anatomy, five fingers each. Plain, text-free.
 ```
 
+## Seedance 2.5 structured prompts (Higgsfield "Seedance 2.5 vs 2.0", used from round v12)
+Write each continuous shot in these blocks, in this order:
+1. **SCENE CONTEXT**: one or two lines saying where we are and why this moment matters.
+2. **ACTIVE REFERENCES**: `@image1 = the opening frame, continue this exact shot … 100% match to the reference`, then `@image2 = the photograph … 100% match, it is a still photograph`, then `@image3 = hands and grey sleeves`.
+3. **FIRST FRAME & BLOCKING**: what frame 0 shows and where the camera is. Her face is never seen.
+4. **FORMAT**: one continuous take, no cuts, 16:9.
+5. **OPTICS**: lens, depth of field, grain.
+6. **CAMERA**: one move only, slow.
+7. **ACTION BEATS**: timed, for example `0–3s …, 3–11s …, 11–14s stillness`. Leave the last seconds still, so the next shot can start from the last frame.
+8. **PHYSICS**: paper lies flat; ink stays once written.
+9. **LIGHTING**: dusk through a barred window.
+10. **AUDIO**: foley only, no music, no speech.
+11. **LOCKS / POSITIVE CONSTRAINTS**: the woman in the print never moves; black-and-white; only the words asked for.
+
+Continuity chain:
+- Pass the previous take's **last frame** as @image1.
+- Seedance 2.5 does not treat it as a true first frame. It re-frames, though it lands close enough for a straight cut when the camera sits over her shoulder.
+- Temp uploads are single-use. To reuse references, pass `production/videoassets/<assetId>_reference_image_N.png` from an earlier job.
+
 ## Captions
 Source: the shot 04 testimony audio. Output: burned-in EN subtitles plus an FR version. Check every name and place by ear with the witness; never trust auto-transcription of names.
 

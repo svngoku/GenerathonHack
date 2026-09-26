@@ -41,3 +41,10 @@ Lingala words marked `[CHECK]` — to be checked with a Lingala speaker; never t
 - **Main voice:** Fatou (ElevenLabs library, `fr-african`, "a French-speaking African woman").
 - **Alternative:** Dolamade, the voice Marty asked for. It is an English voice with a Nigerian accent, so its French sounds anglophone West African, not Kinshasa.
 - **Still open:** no Congolese (Lingala-accented) voice exists in the library. A consenting Kinshasa speaker remains the best option. "Kobosana te" still needs checking by a Lingala speaker `[CHECK]`.
+
+## Voice as built (cut v12)
+The voice is Fatou's **emotional** take, `05_audio/voice/v08/fatou_emo_1.mp3` (ElevenLabs eleven_v3).
+- The same words, with performance tags: [softly], [hums softly] on "Pitié", and [voice breaking] on "N'oublie pas".
+- It is paced onto the same line grid with `06_edit/v06/pace_take.py fatou_emo`; subtitles are in `subs_fatou_emo.json`.
+- The second take, `fatou_emo_2`, is not used.
+- Music stays under the voice at 0.24, with a sidechain dip only while she speaks, so the pauses breathe with "Pitié" instead of falling silent.

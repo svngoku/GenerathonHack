@@ -25,6 +25,16 @@ TAKES = {
       (23.70, 27.75, 5, [(5, 0, 1)]),
       (28.35, 29.44, 6, [(6, 0, 1)]),
   ]),
+  # v12: more emotional take (hum, breath, voice breaking on "N'oublie pas"); cuts from local Whisper (round v12)
+  "fatou_emo": ("../../05_audio/voice/v08/fatou_emo_1.mp3", [
+      (0.00, 3.40, 0, [(0, 0, 1)]),
+      (5.00, 10.40, 1, [(1, 0, 1)]),
+      (11.30, 15.30, 2, [(2, 0, 1)]),
+      (15.40, 16.70, 3, [(3, 0, 1)]),
+      (17.80, 22.10, 4, [(4, 0, 1)]),
+      (23.40, 27.30, 5, [(5, 0, 1)]),
+      (28.00, 29.40, 6, [(6, 0, 1)]),
+  ]),
 }
 name = sys.argv[1]; src, lines = TAKES[name]
 y = np.frombuffer(subprocess.run([FF, "-loglevel", "error", "-i", src, "-f", "f32le", "-ac", "1", "-ar", str(SR), "-"], capture_output=True, check=True).stdout, np.float32)

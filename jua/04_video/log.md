@@ -149,3 +149,45 @@ It replaces `room_push` in `timeline_v10.json`, playing under the lyric *Le soir
 | music | local | "Pitié" is one continuous cue from 0:10 (song 0:06) to the end; it dips from 0.5 to 0.11 (−13 dB) over 1:31–1:35, stays under the voice, and returns over 2:11–2:14 | — | `timeline_v11.json` (cue_a.duck) | replaces the stop at 1:36 and the separate cue B |
 
 The old overhead shot04 (hands on the old table) is no longer used. Timeline: return_B → cut → hold_B → 2.5 s dissolve → face_alive. Spend this round: 1,848 credits.
+
+## Round v12: one continuous dusk world from 0:56 to 2:33; no animated portrait; the collage fits the frame; more emotion in the voice
+Marty's notes:
+- "same for 0:56–1:17";
+- "1:53–2:10: not the animated photo, a frame of the woman touching the photo";
+- "2:11–2:32 still the old generation and the Mama Nzeba picture is cut";
+- "the audio misses emotions and has blanks".
+
+The Kling blink-and-smile beat has been **removed**, so the portrait never moves again. The end-card line about it is gone.
+
+Prompts from here on follow the Higgsfield "Seedance 2.5" structure:
+- SCENE CONTEXT
+- ACTIVE REFERENCES (@image1 = opening frame, "100% match")
+- FIRST FRAME & BLOCKING
+- FORMAT
+- OPTICS
+- CAMERA
+- ACTION BEATS with timings
+- PHYSICS
+- LIGHTING
+- AUDIO
+- LOCKS
+
+| shot | model | prompt | refs | file | verdict |
+|---|---|---|---|---|---|
+| trunk / souvenirs (S0) | seedance-2.5 ×2, 24s 720p, audio | kneels by an old metal trunk at dusk and unties a bundle of photos; looks at two portraits (K2, K3), stops on Mama Nzeba's, turns it to the plain back, presses it to her chest; over her shoulder, face never shown | room plate, hands_sheet, K2, K3, K1 | A 0a898462-2c11-465c-8845-ae136e1bddcd → `trunk_A.mp4` · B a300a915-7c1f-472d-9ac1-028bfabb5514 → `trunk_B.mp4` (1,008 each) | **KEEP A**: the same plaster wall with barred-window dusk shadows and the same grey top as return and hold; she goes through the bundle, turns one print to its plain back, and ends holding Mama Nzeba's portrait close. B REJECT: a different, darker trunk room, and it falls almost to black in the last 2 s |
+| touch (S1) | seedance-2.5 ×2, 20s 720p, audio; opening frame = **last frame of hold_B** | lowers the print onto the table; her fingertips touch the face in the photograph and linger; left hand to the heart; the camera drifts down | hold_B_last, K1, hands_sheet | A 55e35dc2-09c2-45af-8809-238dfd56c17c → `touch_A.mp4` · B 63bd8bdc-3ddf-4168-8fe4-4327e0656890 → `touch_B.mp4` (840 each) | **KEEP A**: frame 0 is nearly identical to hold_B's last frame, so the cut is invisible; her fingertips rest on the face in the print for about 12 s. The print keeps its face. Note: the forearm at the end is bare and soft-focus. B REJECT: jumps to a wider window framing, and the print's face is barely readable on the table |
+| name (S2) | seedance-2.5 ×2, 14s 720p, audio; opening frame = **last frame of touch_A**; Higgsfield structure | picks up a dark-blue fountain pen and writes "Mama Nzeba" (spelled M-a-m-a N-z-e-b-a) on the white strip below the portrait; the whole print stays in frame | touch_A_last, K1, hands_sheet | A ef6068d8-b8e0-444f-8718-98d19a3ede43 → `name12_A.mp4` · B f56d5b7d-4e30-4e8b-be8e-0792751d0a97 → `name12_B.mp4` (588 each) | Both spell **M-a-m-a N-z-e-b-a** correctly, checked on the last frame. **KEEP B**: large, readable cursive with the whole print in frame, so it reads with the sound off; it joins with a 1 s dissolve because its opening angle differs slightly. A: seamless continuation of touch_A, but the name is tiny on a small label |
+| family (S3) | seedance-2.5 ×2, 12s 720p, audio; opening frame = **last frame of name12_B**; Higgsfield structure | sets the pen down and lays two other family portraits on either side of the named one; hands withdraw; the camera cranes back so every print sits fully inside the frame | name12_B_last, K2, K3, K1 (reused as `production/videoassets/0a898462…_reference_image_2/3/4.png`) | A 9d026d67-e209-4286-8b8c-8579a336ddeb → `family12_A.mp4` · B dc62dd40-9d1a-4b3f-9a01-ef09062cdc7a → `family12_B.mp4` (504 each) | **KEEP A**: the last frame shows three prints side by side on the dusk table, all fully in frame, "Mama Nzeba" readable, her portrait uncovered. This replaces the old collage, whose left print was cut by the frame edge. B REJECT: the other prints cover Mama Nzeba's face |
+
+**Audio (v12):**
+- Voice: Fatou's emotional take `fatou_emo_1` (eleven_v3 with [softly], [hums softly], [voice breaking]), paced onto the same line grid (`pace_take.py fatou_emo`), gain 1.7.
+- Music:
+  - "Pitié" now starts at 0:04 on the song's own intro, so film = song + 4 is kept and the old 0–10 s digital silence is gone.
+  - Under the voice it sits at 0.24 (it was 0.11).
+  - A sidechain compressor keyed by the voice dips it only while she speaks, so it swells back in her pauses.
+  - Fix: the sidechain key is padded (`apad`), otherwise the music stopped when the voice file ended (2:13).
+- A brown-noise room-tone bed at −34 dB runs under everything, so there is never digital silence.
+
+**Timeline v12** (`06_edit/v06/timeline_v12.json`, 2:51): trunk_A (0:56) → return_B → hold_B (played through its 22.0 s frame) → cut → touch_A → 1 s dissolve → name12_B → cut → family12_A (its last frame is held about 3 s so the full arrangement reads) → end card v12. The face_alive beat and its end-card line are removed.
+
+Spend this round: 2×1,008 + 2×840 + 2×588 + 2×504 = 5,880 credits.
