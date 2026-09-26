@@ -8,7 +8,7 @@ Mitigations (mandatory):
 - **Upload the unlisted film to YouTube early (Sat night)** and check it plays for a logged-out viewer in several countries. If Content ID mutes or blocks it, switch to the backup.
 - **Backup mix always ready:** the original-score version (cues A/B below, rumba guitar in the same spirit) → `06_edit/cut_vNN_original_score.mp4`.
 - Credit it on the end card: *Music: Tabu Ley Rochereau, "Pitié"*. Log it in licenses.md as "used for non-commercial demo; not licensed".
-- **Keep the mp3 local** (`jua/05_audio/reference/`, git-ignored). Edit it with ffmpeg on the machine; never upload it to Arcads or use it as a generation reference.
+- **The mp3 lives in the private repo:** `jua/05_audio/reference/tabu_ley_pitie.mp3` (committed at Marty's request so cloud sessions can access it). Edit it with ffmpeg only; never upload it to Arcads or use it as a generation reference; **never make the repo public while it's in there** (remove it from history first).
 
 **How to use it in the cut:** find two passages by ear and with ffmpeg (`silencedetect`, `ebur128`):
 - **Cue A slot (10–38s, 28s):** the sparsest guitar-led passage. Faded in under the restoration, kept low.
