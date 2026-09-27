@@ -1,6 +1,6 @@
 # Face-cam presentation, cut v15 (target 1:25; limit 1:30, tolerance 1:40)
 
-About 230 words of French at a calm pace (about 160 words per minute) comes to about 1:25.
+About 215 words of French at a calm pace (about 160 words per minute) comes to about 1:20–1:25.
 Each block gives its timecode, the words to say, and an optional cutaway from the film.
 
 ---
@@ -8,24 +8,23 @@ Each block gives its timecode, the words to say, and an optional cutaway from th
 ## Transcript (French, to be read)
 
 **[0:00–0:15] The project** *(cutaway: the boy opens the tin box, the blank back of the photo)*
-> Moi, je n'ai qu'une seule photo de moi petit. Et c'est le cas de beaucoup de familles africaines : on a si peu de photos qu'on finit par oublier nos ancêtres.
-> *Jua*, c'est un court-métrage : une famille de Kinshasa déménage, retrouve une vieille photo sans nom, la restaure… et rend à Mama Nzeba sa place au mur.
+> Moi, je n'ai qu'une seule photo de moi petit. Comme beaucoup de familles africaines : si peu de photos qu'on oublie nos ancêtres.
+> *Jua*, c'est un court-métrage : une famille de Kinshasa retrouve une vieille photo sans nom, la restaure, et rend à Mama Nzeba sa place au mur.
 
 **[0:15–0:40] The tools, and why** *(cutaway: the black-and-white portrait cutting to colour)*
 > J'ai tout produit avec des agents.
-> - **Claude Code** a été mon réalisateur-monteur : il écrit les prompts, choisit les prises et monte le film image par image.
-> - Dans **Arcads**, **Nano Banana 2** restaure la photo, et **Seedance 2.5** crée les scènes, parce que c'est le modèle qui garde le mieux les personnages d'un plan à l'autre.
-> - **ElevenLabs** donne la voix de la maman, avec un vrai accent africain et de l'émotion.
+> - **Claude Code** a été mon réalisateur-monteur : prompts, choix des prises, montage.
+> - Dans **Arcads**, **Nano Banana 2** restaure la photo, et **Seedance 2.5** crée les scènes, parce qu'il garde le mieux les personnages.
+> - **ElevenLabs** donne à la maman une voix à l'accent africain, pleine d'émotion.
 
 **[0:40–1:00] The difficulties** *(cutaway: the name written in the album)*
-> Le plus dur, c'était la cohérence. L'IA redessine les visages à chaque plan : on a verrouillé des planches de personnages, et chaque plan repart de la dernière image du précédent.
-> Il y a eu aussi l'écriture du nom, les silences dans le son, et des raccords à caler au pixel près.
+> Le plus dur : la cohérence. L'IA redessine les visages à chaque plan, alors on a verrouillé des planches de personnages, et chaque plan repart de la dernière image du précédent. Puis les raccords, calés au pixel près.
 
 **[1:00–1:15] What I learned** *(cutaway: "Mbote, Mama Nzeba!" in front of the wall)*
 > J'ai appris que l'IA peut restaurer une image, mais que seul un humain peut rendre un nom. Et que le son raconte la moitié de l'histoire : la rumba de Tabu Ley, *Pitié*, ne s'arrête jamais.
 
 **[1:15–1:28] What I could have done better**
-> Avec plus de temps, j'aurais enregistré une vraie voix de famille plutôt qu'une voix IA, fait valider le lingala par un locuteur natif, et fixé l'histoire plus tôt, parce qu'on l'a réécrite plusieurs fois.
+> Avec plus de temps : une vraie voix de famille plutôt qu'une voix IA, le lingala validé par un locuteur natif, et l'histoire fixée plus tôt.
 > *Jua* : on restaure l'image, on se souvient de la personne ensemble.
 
 ---
