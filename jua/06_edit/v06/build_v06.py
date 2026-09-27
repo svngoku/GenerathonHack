@@ -22,6 +22,7 @@ X = lambda k: 0 if k == 0 else max(SEG[k]["xin"], 1 / 24)   # a hard cut is a 1-
 def dur(f): return float(subprocess.run([FF, "-i", f], capture_output=True, text=True).stderr.split("Duration: ")[1].split(",")[0].split(":")[2]) + 60 * float(subprocess.run([FF, "-i", f], capture_output=True, text=True).stderr.split("Duration: ")[1].split(",")[0].split(":")[1])
 
 SKIP = os.environ.get("SKIP_SEGS") == "1" and os.path.exists("picture.mp4")
+SKIP_G = os.environ.get("SKIP_G") == "1"   # reuse g??.mp4/.wav (e.g. after matchcut.py) but rebuild the picture
 # 1) normalise each segment to its extended length (nominal + half of each neighbouring dissolve)
 Vf = "scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2,fps=24,format=yuv420p"
 starts, lens = [], []
@@ -32,11 +33,13 @@ for k, s in enumerate(SEG):
     src = s["src"].replace("$SD", SD).replace("$V5", V5)
     speed = s.get("speed", 1.0)
     vf = f"setpts={speed}*PTS,{Vf},tpad=stop_mode=clone:stop_duration=8"
-    if not SKIP: sh([FF, "-loglevel", "error", "-y", "-i", src, "-an", "-vf", vf, "-t", f"{ln:.3f}", "-c:v", "libx264", "-crf", "16", "-preset", "fast", f"g{k:02d}.mp4"])
-    if s.get("vol") and not SKIP:
+    if not (SKIP or SKIP_G): sh([FF, "-loglevel", "error", "-y", "-i", src, "-an", "-vf", vf, "-t", f"{ln:.3f}", "-c:v", "libx264", "-crf", "16", "-preset", "fast", f"g{k:02d}.mp4"])
+    if s.get("vol") and not (SKIP or SKIP_G):
         af = f"atempo={1/speed:.4f}," if speed != 1.0 else ""
         sh([FF, "-loglevel", "error", "-y", "-i", src, "-vn", "-af", f"{af}aresample=48000,aformat=channel_layouts=stereo,volume={s['vol']},apad", "-t", f"{ln:.3f}", f"g{k:02d}.wav"])
 
+json.dump({"starts": starts, "lens": lens}, open("seg_layout.json", "w"))
+if os.environ.get("STOP") == "segs": sys.exit(0)
 # 2) picture: chained xfade (a 0-length transition is a straight cut, done with a 1-frame fade)
 inp, fc, last = [], [], "[0:v]"
 for k in range(len(SEG)): inp += ["-i", f"g{k:02d}.mp4"]

@@ -1,0 +1,132 @@
+[
+ {
+  "cut": "find->tante",
+  "at": 18,
+  "plain": -0.048,
+  "best": 0.166,
+  "side": "out",
+  "zoom": 1.75,
+  "box": [
+   0.083,
+   0.138
+  ],
+  "applied": false
+ },
+ {
+  "cut": "tante->joy",
+  "at": 32,
+  "plain": -0.028,
+  "best": 0.325,
+  "side": "out",
+  "zoom": 1.95,
+  "box": [
+   0.286,
+   0.0
+  ],
+  "applied": true
+ },
+ {
+  "cut": "joy->portrait_in",
+  "at": 44,
+  "plain": 0.05,
+  "best": 0.222,
+  "side": "in",
+  "zoom": 1.55,
+  "box": [
+   0.285,
+   0.066
+  ],
+  "applied": false
+ },
+ {
+  "cut": "portrait_in->memory",
+  "at": 47,
+  "plain": 0.303,
+  "best": 0.728,
+  "side": "in",
+  "zoom": 1.05,
+  "box": [
+   0.035,
+   0.018
+  ],
+  "applied": true
+ },
+ {
+  "cut": "memory->return_home",
+  "at": 62,
+  "plain": 0.046,
+  "best": 0.238,
+  "side": "out",
+  "zoom": 2.0,
+  "box": [
+   0.247,
+   0.051
+  ],
+  "applied": false
+ },
+ {
+  "cut": "return_home->holds_photo",
+  "at": 76.5,
+  "plain": 0.017,
+  "best": 0.539,
+  "side": "out",
+  "zoom": 2.0,
+  "box": [
+   0.201,
+   0.088
+  ],
+  "applied": true
+ },
+ {
+  "cut": "holds_photo->touch",
+  "at": 97.5,
+  "plain": 0.58,
+  "best": 0.736,
+  "side": "in",
+  "zoom": 1.05,
+  "box": [
+   0.02,
+   0.0
+  ],
+  "applied": true
+ },
+ {
+  "cut": "touch->album",
+  "at": 117.5,
+  "plain": -0.011,
+  "best": 0.231,
+  "side": "out",
+  "zoom": 1.85,
+  "box": [
+   0.459,
+   0.46
+  ],
+  "applied": false
+ },
+ {
+  "cut": "album->wall",
+  "at": 133.5,
+  "plain": 0.064,
+  "best": 0.184,
+  "side": "in",
+  "zoom": 1.5,
+  "box": [
+   0.316,
+   0.13
+  ],
+  "applied": false
+ },
+ {
+  "cut": "wall->end",
+  "at": 149.5,
+  "plain": 0.0,
+  "best": 0.0,
+  "side": "out",
+  "zoom": 1.0,
+  "box": [
+   0.0,
+   0.0
+  ],
+  "applied": false
+ }
+]

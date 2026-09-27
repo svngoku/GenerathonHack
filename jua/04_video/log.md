@@ -228,3 +228,23 @@ The little girl in yellow is the mother as a child.
 | portrait in | local `portrait_in.py` | 3 s on the locked restored portrait (black-and-white, untouched), push 1.00 to 1.05 | locked/restored.png | `06_edit/v06/portrait_in.mp4` | hard cut in, hard cut out |
 
 Timeline v14: joy → cut → portrait_in (44–47) → cut → memory_B (47–62) → cut → return_B. "Pitié" plays continuously; its first line, "Pitié toi mon amour", lands on the brazier shot.
+
+## Round v15: hard cuts only, matched pixel by pixel (Marty: "des bons matching cuts, pixel par pixel… hard cuts pour les changements de point")
+All dissolves have been removed; every transition is a hard cut (`timeline_v15.json`, all `xin` 0).
+
+How the matching works:
+- **Automatic (`06_edit/v06/matchcut.py`):**
+  - For each cut, it compares the last outgoing frame with the first incoming frame, using normalised cross-correlation on edge maps (numpy FFT).
+  - It searches a zoom box from 1.0× to 2.0× on either side.
+  - When a match is found, one side pushes in (outgoing) or opens zoomed and eases back (incoming) over 1.25 s, so that the two frames coincide at the cut.
+  - Results are in `matchcut_report.json`.
+- **By hand (`matchcut_manual.py`):** object match cuts on the print of Mama Nzeba.
+
+| cut | plain → matched correlation | kept |
+|---|---|---|
+| portrait_in → memory | 0.30 → **0.73** | yes: same pose and size, only the colour changes |
+| hold → touch | 0.58 → **0.74** | yes |
+| touch → album | hand-set box | yes: the print on the table lands where the boy mounts the print in the album |
+| album → wall | hand-set box | yes: album push-in on her print; her face lands on the framed portrait's axis |
+| tante → joy, return → hold | false match (a 2× zoom onto empty table or cheek) | no: plain hard cuts |
+| the others (different places) | below 0.25 | plain hard cuts |
