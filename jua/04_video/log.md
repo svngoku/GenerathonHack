@@ -210,3 +210,21 @@ Story: `01_bible/story_v13.md`.
 | wall | seedance-2.5 ×2, 14s, audio | new home: they hang the framed portraits, Mama Nzeba in the centre; boy: « Mbote, Mama Nzeba ! » | chars_b, K1, K2, K3 | **A 37b341da…** → `wall_A.mp4` · B dd817b20… (still rendering, unused) | **KEEP A**: three framed portraits fully in frame, mother and son looking up at them. Whisper hears "Bonne… Mama Zéba", so check the "Mbote" by ear |
 
 The mother's other lines are the testimony (`fatou_emo_1`), over return_B, hold_B and touch_A: the dusk scenes whose hands and grey top are hers.
+
+## Round v14: into her memory (0:44–1:02), in colour, with hard cuts (Marty, 27 Sept)
+**Rule exception, asked for by Marty:** Mama Nzeba is shown alive, in colour, as the mother's memory. The photograph itself is never altered. The end card says: "Her memories, in colour: imagined by AI (Seedance 2.5) from the family's words; colours are imagined."
+
+The content comes only from the testimony, with nothing added:
+- the portrait being taken ("so that we would remember her face");
+- on Sundays, the headwrap tied in front of the mirror while she hums;
+- the charcoal fire and the soap.
+
+The little girl in yellow is the mother as a child.
+
+| shot | model | prompt | refs | file | verdict |
+|---|---|---|---|---|---|
+| memory ×2 | seedance-2.5, 15s, 3 shots with hard cuts, colour | 1972 studio, same pose as the portrait, the flash, a smile; then about 25 years later, in front of the mirror with the little girl; then the charcoal brazier, her hand on the little girl's cheek | K1 restored, K1 alternate | A 07e993e7… · **B f6ae6206…** → `04_video/v13/memory_B.mp4` (630 each) | **KEEP B**: the first shot is the portrait's exact pose in colour, so cutting from the black-and-white portrait reads as "the photo becomes memory"; same face across all three shots. A REJECT: its first shot stays black-and-white, which means the photograph itself moves |
+| studio (backup) | seedance-2.5, 12s | 1972 studio, two shots | K1 | e26fd667… (still rendering, unused) | — |
+| portrait in | local `portrait_in.py` | 3 s on the locked restored portrait (black-and-white, untouched), push 1.00 to 1.05 | locked/restored.png | `06_edit/v06/portrait_in.mp4` | hard cut in, hard cut out |
+
+Timeline v14: joy → cut → portrait_in (44–47) → cut → memory_B (47–62) → cut → return_B. "Pitié" plays continuously; its first line, "Pitié toi mon amour", lands on the brazier shot.
