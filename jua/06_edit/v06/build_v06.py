@@ -49,9 +49,9 @@ print("picture.mp4", dur("picture.mp4")); assert abs(dur("picture.mp4") - B[-1])
 
 # 3) overlays (own pass, video only): each PNG cropped to its text box, looped at 24 fps, alpha-faded, shifted in time
 from PIL import Image
-subs = json.load(open(os.environ.get("SUBS", f"{V5}/subs.json"))); caps = json.load(open("lyric_caps.json"))
+subs = json.load(open(os.environ.get("SUBS", f"{V5}/subs.json"))); caps = json.load(open(os.environ.get("CAPS", "lyric_caps.json")))
 ov = [(f"{V5}/sub_{i}.png", VO + a, VO + b, 0.25) for i, (a, b, _) in enumerate(subs)]
-ov += [(f"lyr_{i}.png", c["t0"], c["t1"], 0.6) for i, c in enumerate(caps)]
+ov += [(c.get("png", f"lyr_{i}.png"), c["t0"], c["t1"], 0.6) for i, c in enumerate(caps)]
 ov += [(n["png"], n["t0"], n["t1"], 0.6) for n in T.get("notes", [])]
 inp, fc, last = ["-i", "picture.mp4"], [], "[0:v]"
 for i, (png, a, b, f) in enumerate(ov):

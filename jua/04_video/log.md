@@ -191,3 +191,22 @@ Prompts from here on follow the Higgsfield "Seedance 2.5" structure:
 **Timeline v12** (`06_edit/v06/timeline_v12.json`, 2:51): trunk_A (0:56) → return_B → hold_B (played through its 22.0 s frame) → cut → touch_A → 1 s dissolve → name12_B → cut → family12_A (its last frame is held about 3 s so the full arrangement reads) → end card v12. The face_alive beat and its end-card line are removed.
 
 Spend this round: 2×1,008 + 2×840 + 2×588 + 2×504 = 5,880 credits.
+
+## Round v13: the forgotten box, a family moving house (Marty's restructure, 27 Sept)
+Story: `01_bible/story_v13.md`.
+- **Place:** Kinshasa, Bandalungwa, chosen by Claude as Marty allowed.
+- **Portrait:** stays 1972, in its wax pagne (Marty).
+- **Language:** French with Lingala words.
+- **Voice:** the testimony is kept, spoken by the mother.
+
+| shot | model | prompt | refs | file | verdict |
+|---|---|---|---|---|---|
+| characters | nano-banana-2 ×2, 16:9 | character sheet: mother (about 35, pale grey long-sleeved top, wax wrap) and son (about 8, mustard T-shirt) | hands_sheet | a 311944fc… (has text labels) · **b 9030b328-5fdf-4e66-ab55-5f5721b537ee** → `01_bible/family/chars_b.png` | **KEEP b**: no labels; passed as @image1 to every family shot |
+| mother's line | ElevenLabs eleven_v3, Fatou `Vza9yt3uSx3RXnRx6YfI` ×2 | « [surprised, softly] Ah… ça ! C'est ta tante qui nous l'avait donnée. [sighs] Tu sais, chez nous… on a si peu de photos. Moi, j'en ai qu'une de moi petite. » | — | **take 1** → `05_audio/voice/v13/mother_tante_1.mp3` (10.9 s) | Whisper confirms the text; used as Seedance reference audio for lip-sync |
+| find | seedance-2.5 ×2, 18s, audio | moving day; the boy pulls a rusty tin box from the storeroom: « Maman, regarde ! Il y a une boîte… c'est quoi ? »; opens it, turns the photo over: blank back, « Y a rien d'écrit… » | chars_b, room plate, original | **A 19f529b8…** → `04_video/v13/find_A.mp4` · B 4de98b9f… | **KEEP A**: wide shot, mother packing in the background, blank back clearly shown. Whisper hears one possible stray background phrase at 7–10 s, so that stretch is lowered to 0.12 (`find_A_fix.mp4`). B: tighter, works too |
+| aunt | seedance-2.5 ×2, 14s, reference audio = mother_tante_1 | the mother kneels, takes the photo, speaks (lip-synced) | chars_b, room plate, original, audio | A 1ab76a02… · **B 1e04667a…** → `tante_B.mp4` | **KEEP B**: tender, a little sad, matches "on a si peu de photos". A: smiles through the line |
+| joy | seedance-2.5 ×2, 12s, audio | she photographs the print; the phone shows the restored face; boy: « Waouh ! On voit son visage ! »; laughter, hug | chars_b, original, restored print | A 91348848… (still rendering, unused) · **B be566eab…** → `joy_B.mp4` | **KEEP B**: the restored face on the phone, the boy's delight, the hug. This is the joy beat |
+| album | seedance-2.5 ×2, 16s, audio | the boy mounts the portrait with photo corners in the old family album and writes "Mama Nzeba" | chars_b, K1, K2, K3 | **A ca7de8b4…** → `album_A.mp4` · B fa796286… | **KEEP A**: last frame reads **Mama Nzeba**, checked letter by letter, under her portrait in the album. B REJECT: the name is written upside down and unreadable |
+| wall | seedance-2.5 ×2, 14s, audio | new home: they hang the framed portraits, Mama Nzeba in the centre; boy: « Mbote, Mama Nzeba ! » | chars_b, K1, K2, K3 | **A 37b341da…** → `wall_A.mp4` · B dd817b20… (still rendering, unused) | **KEEP A**: three framed portraits fully in frame, mother and son looking up at them. Whisper hears "Bonne… Mama Zéba", so check the "Mbote" by ear |
+
+The mother's other lines are the testimony (`fatou_emo_1`), over return_B, hold_B and touch_A: the dusk scenes whose hands and grey top are hers.
